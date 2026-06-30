@@ -47,5 +47,6 @@ source = ["src"]
 omit = ["src/main.py"]
 
 [tool.coverage.report]
+include_namespace_packages = true
 fail_under = 80
 show_missing = true
