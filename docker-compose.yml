@@ -1,3 +1,17 @@
+x-backend: &backend
+  build:
+    context: ./backend
+    target: development
+  image: lease-contract-service-development
+  environment:
+    DATABASE_URL: postgresql+asyncpg://lease_contract_service:lease_contract_service@postgres:5432/lease_contract_service
+  volumes:
+    - ./backend/src:/app/src
+  restart: unless-stopped
+  depends_on:
+    postgres:
+      condition: service_healthy
+
 services:
   postgres:
     image: postgres:18
@@ -14,6 +28,23 @@ services:
       interval: 2s
       timeout: 5s
       retries: 15
+
+  api:
+    <<: *backend
+    ports:
+      - "8080:8000"
+    healthcheck:
+      test: ["CMD", "python", "-c", "import urllib.request; urllib.request.urlopen('http://localhost:8000/health')"]
+      # Checks quickly while starting, then rarely, so `just tail` isn't flooded.
+      start_period: 30s
+      start_interval: 1s
+      interval: 30s
+      timeout: 5s
+      retries: 3
+
+  relay:
+    <<: *backend
+    command: ["watchfiles", "--filter", "python", "python -m src.cli.relay_outbox", "src"]
 
 volumes:
   postgres-data:

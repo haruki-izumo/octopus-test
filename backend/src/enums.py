@@ -10,3 +10,4 @@ class ContractStatus(StrEnum):
 
 class AuditAction(StrEnum):
     CONTRACT_CREATED = "CONTRACT_CREATED"
+    BILLING_DAY_CHANGED = "BILLING_DAY_CHANGED"

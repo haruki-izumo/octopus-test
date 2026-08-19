@@ -1,8 +1,3 @@
-"""Sends saved events to other services.
-
-Run it with `uv run python -m src.cli.relay_outbox`.
-"""
-
 import asyncio
 import logging
 
@@ -50,7 +45,13 @@ async def main() -> None:
     clock = SystemClock()
     try:
         while True:
-            if await relay_batch(database, publisher, clock) == 0:
+            try:
+                sent = await relay_batch(database, publisher, clock)
+            except Exception:
+                # Keeps going while the database is unavailable, and sends the batch again later.
+                logger.exception("Couldn't relay outbox messages")
+                sent = 0
+            if sent == 0:
                 await asyncio.sleep(SECONDS_BETWEEN_CHECKS)
     finally:
         await database.dispose()

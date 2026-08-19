@@ -1,10 +1,3 @@
-"""Events we tell other services about.
-
-Names and contents are agreed with the teams that use them, so don't change
-them without talking to those teams. Keep contents small: what happened and
-the relevant IDs.
-"""
-
 from datetime import date, datetime
 from typing import ClassVar
 from uuid import UUID

@@ -1,11 +1,3 @@
-"""Makes it safe for clients to retry requests that create or change data.
-
-Clients send a unique `Idempotency-Key` header with each action. The first
-request with a key claims it, and its response is saved once it succeeds. A
-retry with the same key and body gets the saved response back, without the
-work being done again.
-"""
-
 import hashlib
 import json
 from typing import Annotated, Any

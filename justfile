@@ -1,8 +1,19 @@
 set working-directory := "backend"
 
-# Start Postgres
+compose := "docker compose --file " + justfile_directory() / "docker-compose.yml"
+
+# Pick a recipe from a list (needs fzf)
+[private]
+default:
+    @just --justfile {{ justfile() }} --choose
+
+# Start everything: Postgres, the API on http://localhost:8080 and the outbox relay
 up:
-    docker compose --file {{ justfile_directory() }}/docker-compose.yml up --detach --wait
+    {{ compose }} up --build --detach --wait
+
+# Follow the logs from every container
+tail:
+    {{ compose }} logs --follow --tail 100
 
 # Run database migrations
 migrate:

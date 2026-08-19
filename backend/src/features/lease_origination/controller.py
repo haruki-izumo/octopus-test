@@ -11,7 +11,7 @@ from src.common.pricing import RateCard, calculate_monthly_payment
 from src.enums import AuditAction, ContractStatus
 from src.events.catalogue import ContractCreated
 from src.features.lease_origination.schemas import ContractResponse, CreateContractRequest
-from src.models import Contract, JsonObject
+from src.models import Contract
 
 
 class LeaseOriginationController:
@@ -57,7 +57,7 @@ class LeaseOriginationController:
                 contract,
                 AuditAction.CONTRACT_CREATED,
                 before=None,
-                after=_audit_snapshot(contract),
+                after=contract.audit_snapshot(),
                 actor=actor,
             )
             self.outbox.enqueue(
@@ -73,20 +73,3 @@ class LeaseOriginationController:
     async def get_contract(self, session: AsyncSession, contract_uuid: UUID) -> ContractResponse:
         contract = await self.contracts.get_by_uuid(session, contract_uuid)
         return ContractResponse.from_contract(contract, self.clock.today())
-
-
-def _audit_snapshot(contract: Contract) -> JsonObject:
-    return {
-        "customer_uuid": str(contract.customer_uuid),
-        "status": contract.status,
-        "vehicle_make": contract.vehicle_make,
-        "vehicle_model": contract.vehicle_model,
-        "vehicle_registration": contract.vehicle_registration,
-        "vehicle_price_pence": contract.vehicle_price.pence,
-        "start_date": contract.start_date.isoformat(),
-        "term_months": contract.term_months,
-        "annual_mileage": contract.annual_mileage,
-        "residual_value_pence": contract.residual_value.pence,
-        "monthly_payment_pence": contract.monthly_payment.pence,
-        "billing_day": contract.billing_day,
-    }

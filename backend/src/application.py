@@ -13,6 +13,9 @@ from src.common.outbox import OutboxWriter
 from src.config import Config
 from src.features.lease_origination import routes as lease_origination
 from src.features.lease_origination.controller import LeaseOriginationController
+from src.features.payment_arrangements import routes as payment_arrangements
+from src.features.payment_arrangements.controller import PaymentArrangementsController
+from src.features.payment_arrangements.database_client import BillingDayChangeDatabaseClient
 
 
 def create_application(config: Config, clock: Clock) -> FastAPI:
@@ -38,6 +41,17 @@ def create_application(config: Config, clock: Clock) -> FastAPI:
                 audit=audit,
                 outbox=outbox,
                 rate_card=config.rate_card,
+                clock=clock,
+            )
+        )
+    )
+    application.include_router(
+        payment_arrangements.create_router(
+            PaymentArrangementsController(
+                contracts=contracts,
+                billing_day_changes=BillingDayChangeDatabaseClient(),
+                audit=audit,
+                outbox=outbox,
                 clock=clock,
             )
         )

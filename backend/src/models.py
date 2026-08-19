@@ -92,6 +92,32 @@ class Contract(UuidMixin, Base):
             raise BusinessRuleError(f"A contract can't change from {self.status} to {new_status}")
         self.status = new_status
 
+    def audit_snapshot(self) -> JsonObject:
+        """The contract's terms, as recorded in audit entries."""
+        return {
+            "customer_uuid": str(self.customer_uuid),
+            "status": self.status,
+            "vehicle_make": self.vehicle_make,
+            "vehicle_model": self.vehicle_model,
+            "vehicle_registration": self.vehicle_registration,
+            "vehicle_price_pence": self.vehicle_price.pence,
+            "start_date": self.start_date.isoformat(),
+            "term_months": self.term_months,
+            "annual_mileage": self.annual_mileage,
+            "residual_value_pence": self.residual_value.pence,
+            "monthly_payment_pence": self.monthly_payment.pence,
+            "billing_day": self.billing_day,
+        }
+
+
+class BillingDayChange(UuidMixin, Base):
+    __tablename__ = "billing_day_changes"
+
+    contract_id: Mapped[int] = mapped_column(ForeignKey("contracts.id"), index=True)
+    previous_billing_day: Mapped[int]
+    new_billing_day: Mapped[int]
+    effective_from: Mapped[date]
+
 
 class AuditEntry(UuidMixin, Base):
     __tablename__ = "audit_entries"
