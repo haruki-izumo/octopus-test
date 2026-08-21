@@ -11,9 +11,9 @@ default:
 up:
     {{ compose }} up --build --detach --wait
 
-# Follow the logs from every container
+# Follow the logs from api and relay
 tail:
-    {{ compose }} logs --follow --tail 100
+    {{ compose }} logs api relay --follow --tail 100
 
 # Run database migrations
 migrate:
