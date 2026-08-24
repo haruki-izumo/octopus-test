@@ -75,7 +75,7 @@ while. For a new required column:
 
 Never update existing rows on the `contracts` table inside a migration.
 
-**Why:** with 400,000 rows, it locks the table and caused an outage.
+**Why:** with 40,000 rows, it locks the table and caused an outage.
 
 ## 8. Don't break our API
 The response from `GET /contracts/{uuid}` is used by other teams. Only add

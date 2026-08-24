@@ -4,7 +4,7 @@ Manages active vehicle leases: creating contracts, changes to contracts
 during the lease, and the events other services rely on.
 
 ## Context
-- About 400,000 active contracts, growing by about 15,000 a month
+- About 40,000 active contracts, growing by ~1,500 a month
 - Payments are collected daily, on each contract's billing day
 - This service is the source of truth for contract terms. The billing
   service holds payment schedules, and the documents service creates and
