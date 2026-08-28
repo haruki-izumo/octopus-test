@@ -1,0 +1,25 @@
+{
+    "$schema": "https://www.designtokens.org/schemas/2025.10/format.json",
+    "divider": {
+        "border": {
+            "radius": {
+                "$value": "{border.radius.none}"
+            }
+        },
+        "color": {
+            "background": {
+                "default": {
+                    "$value": "{color.background.shade-1}"
+                }
+            }
+        },
+        "size": {
+            "height": {
+                "$value": "{size.lg}"
+            },
+            "thickness": {
+                "$value": "{size.xxs}"
+            }
+        }
+    }
+}

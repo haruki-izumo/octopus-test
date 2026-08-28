@@ -1,0 +1,233 @@
+{
+    "$schema": "https://www.designtokens.org/schemas/2025.10/format.json",
+    "accordion": {
+        "border": {
+            "focus": {
+                "$value": "{border.focus}"
+            },
+            "radius": {
+                "$value": "{border.radius.large}"
+            }
+        },
+        "color": {
+            "background": {
+                "default": {
+                    "$value": "none"
+                },
+                "hover": {
+                    "$value": "{color.background.shade-2}"
+                },
+                "active": {
+                    "$value": "{color.background.shade-2}"
+                },
+                "disabled": {
+                    "$value": "{color.background.shade-2}"
+                },
+                "filled": {
+                    "default": {
+                        "$value": "{color.background.shade-2}"
+                    },
+                    "hover": {
+                        "$value": "{color.background.shade-2}"
+                    },
+                    "active": {
+                        "$value": "{color.background.shade-2}"
+                    },
+                    "disabled": {
+                        "$value": "{color.background.shade-2}"
+                    }
+                }
+            },
+            "border": {
+                "default": {
+                    "$value": "{color.border.default}"
+                }
+            },
+            "content": {
+                "default": {
+                    "$value": "{color.content.default}"
+                },
+                "hover": {
+                    "$value": "{color.content.default}"
+                },
+                "active": {
+                    "$value": "{color.content.default}"
+                },
+                "disabled": {
+                    "$value": "{color.content.disabled}"
+                }
+            }
+        },
+        "spacing": {
+            "item": {
+                "gap": {
+                    "default": {
+                        "$value": "{spacing.4}"
+                    },
+                    "small": {
+                        "$value": "{spacing.2}"
+                    }
+                }
+            },
+            "header": {
+                "gap": {
+                    "$value": "{spacing.4}"
+                }
+            },
+            "trigger": {
+                "gap": {
+                    "$value": "{spacing.4}"
+                },
+                "padding": {
+                    "block": {
+                        "default": {
+                            "$value": "{spacing.8}"
+                        },
+                        "small": {
+                            "$value": "{spacing.4}"
+                        },
+                        "filled": {
+                            "default": {
+                                "$value": "{spacing.8}"
+                            },
+                            "small": {
+                                "$value": "{spacing.4}"
+                            }
+                        }
+                    },
+                    "inline": {
+                        "default": {
+                            "$type": "dimension",
+                            "$value": {
+                                "value": 0,
+                                "unit": "px"
+                            }
+                        },
+                        "small": {
+                            "$type": "dimension",
+                            "$value": {
+                                "value": 0,
+                                "unit": "px"
+                            }
+                        },
+                        "filled": {
+                            "default": {
+                                "$value": "{spacing.8}"
+                            },
+                            "small": {
+                                "$value": "{spacing.4}"
+                            }
+                        }
+                    }
+                }
+            },
+            "panel": {
+                "padding": {
+                    "block": {
+                        "top": {
+                            "default": {
+                                "$type": "dimension",
+                                "$value": {
+                                    "value": 0,
+                                    "unit": "px"
+                                }
+                            },
+                            "small": {
+                                "$type": "dimension",
+                                "$value": {
+                                    "value": 0,
+                                    "unit": "px"
+                                }
+                            },
+                            "filled": {
+                                "default": {
+                                    "$type": "dimension",
+                                    "$value": {
+                                        "value": 0,
+                                        "unit": "px"
+                                    }
+                                },
+                                "small": {
+                                    "$type": "dimension",
+                                    "$value": {
+                                        "value": 0,
+                                        "unit": "px"
+                                    }
+                                }
+                            }
+                        },
+                        "bottom": {
+                            "default": {
+                                "$value": "{spacing.8}"
+                            },
+                            "small": {
+                                "$value": "{spacing.4}"
+                            },
+                            "filled": {
+                                "default": {
+                                    "$value": "{spacing.8}"
+                                },
+                                "small": {
+                                    "$value": "{spacing.4}"
+                                }
+                            }
+                        }
+                    },
+                    "inline": {
+                        "left": {
+                            "default": {
+                                "$type": "dimension",
+                                "$value": {
+                                    "value": 0,
+                                    "unit": "px"
+                                }
+                            },
+                            "small": {
+                                "$type": "dimension",
+                                "$value": {
+                                    "value": 0,
+                                    "unit": "px"
+                                }
+                            },
+                            "filled": {
+                                "default": {
+                                    "$value": "{spacing.8}"
+                                },
+                                "small": {
+                                    "$value": "{spacing.4}"
+                                }
+                            }
+                        },
+                        "right": {
+                            "default": {
+                                "$type": "dimension",
+                                "$value": {
+                                    "value": 0,
+                                    "unit": "px"
+                                }
+                            },
+                            "small": {
+                                "$type": "dimension",
+                                "$value": {
+                                    "value": 0,
+                                    "unit": "px"
+                                }
+                            },
+                            "filled": {
+                                "default": {
+                                    "$value": "{spacing.8}"
+                                },
+                                "small": {
+                                    "$value": "{spacing.4}"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "typography": {
+            "$value": "{typography.heading-xsmall}"
+        }
+    }
+}

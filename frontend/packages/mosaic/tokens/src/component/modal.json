@@ -1,0 +1,50 @@
+{
+    "$schema": "https://www.designtokens.org/schemas/2025.10/format.json",
+    "modal": {
+        "border": {
+            "focus": {
+                "$value": "{border.focus}"
+            },
+            "radius": {
+                "$value": "{border.radius.large}"
+            },
+            "width": {
+                "$value": "{border.width.small}"
+            }
+        },
+        "color": {
+            "background": {
+                "default": {
+                    "$value": "{color.background.shade-1}"
+                },
+                "overlay": {
+                    "$value": "{color.background.backdrop}"
+                }
+            },
+            "border": {
+                "default": {
+                    "$value": "{color.border.default}"
+                }
+            }
+        },
+        "spacing": {
+            "dialog": {
+                "$value": "{spacing.4}"
+            },
+            "modal": {
+                "sm": {
+                    "$value": "{spacing.4}"
+                },
+                "md": {
+                    "$value": "{spacing.4}"
+                },
+                "lg": {
+                    "$value": "{spacing.8}"
+                },
+                "xl": {
+                    "$value": "{spacing.16}"
+                }
+            }
+        }
+    }
+}

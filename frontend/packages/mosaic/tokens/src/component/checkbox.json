@@ -1,0 +1,80 @@
+{
+    "$schema": "https://www.designtokens.org/schemas/2025.10/format.json",
+    "checkbox": {
+        "border": {
+            "focus": {
+                "$value": "{border.focus}"
+            },
+            "radius": {
+                "$value": "{border.radius.small}"
+            },
+            "width": {
+                "$value": "{border.width.small}"
+            }
+        },
+        "color": {
+            "background": {
+                "active": {
+                    "$value": "{color.action.primary.background.default}"
+                },
+                "disabled": {
+                    "$value": "{color.action.disabled}"
+                },
+                "active-disabled": {
+                    "$value": "{color.background.shade-1}"
+                },
+                "danger": {
+                    "$value": "{color.action.danger.background.default}"
+                }
+            },
+            "border": {
+                "default": {
+                    "$value": "{color.border.default}"
+                },
+                "active": {
+                    "$value": "{color.action.primary.border.active}"
+                },
+                "danger": {
+                    "$value": "{color.action.danger.border.default}"
+                }
+            },
+            "content": {
+                "default": {
+                    "$value": "{color.content.default}"
+                }
+            },
+            "icon": {
+                "default": {
+                    "$value": "{color.named.white}"
+                },
+                "disabled": {
+                    "$value": "{color.content.disabled}"
+                }
+            }
+        },
+        "spacing": {
+            "height": {
+                "$type": "dimension",
+                "$value": {
+                    "value": 24,
+                    "unit": "px"
+                }
+            },
+            "width": {
+                "$type": "dimension",
+                "$value": {
+                    "value": 24,
+                    "unit": "px"
+                }
+            },
+            "gap": {
+                "$value": "{spacing.2}"
+            }
+        },
+        "typography": {
+            "label": {
+                "$value": "{typography.body}"
+            }
+        }
+    }
+}

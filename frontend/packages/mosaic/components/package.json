@@ -1,0 +1,138 @@
+{
+    "$schema": "https://json.schemastore.org/package.json",
+    "name": "@octoev/mosaic",
+    "version": "1.2.0",
+    "description": "",
+    "license": "UNLICENSED",
+    "files": [
+        "dist",
+        "global.d.ts"
+    ],
+    "type": "module",
+    "sideEffects": [
+        "**/*.css"
+    ],
+    "exports": {
+        "./Accordion": {
+            "import": "./dist/Accordion/index.js",
+            "types": "./dist/Accordion/index.d.ts"
+        },
+        "./Alert": {
+            "import": "./dist/Alert/index.js",
+            "types": "./dist/Alert/index.d.ts"
+        },
+        "./Box": {
+            "import": "./dist/Box/index.js",
+            "types": "./dist/Box/index.d.ts"
+        },
+        "./Breadcrumbs": {
+            "import": "./dist/Breadcrumbs/index.js",
+            "types": "./dist/Breadcrumbs/index.d.ts"
+        },
+        "./Button": {
+            "import": "./dist/Button/index.js",
+            "types": "./dist/Button/index.d.ts"
+        },
+        "./Checkbox": {
+            "import": "./dist/Checkbox/index.js",
+            "types": "./dist/Checkbox/index.d.ts"
+        },
+        "./CheckboxGroup": {
+            "import": "./dist/CheckboxGroup/index.js",
+            "types": "./dist/CheckboxGroup/index.d.ts"
+        },
+        "./Description": {
+            "import": "./dist/Description/index.js",
+            "types": "./dist/Description/index.d.ts"
+        },
+        "./Divider": {
+            "import": "./dist/Divider/index.js",
+            "types": "./dist/Divider/index.d.ts"
+        },
+        "./FieldError": {
+            "import": "./dist/FieldError/index.js",
+            "types": "./dist/FieldError/index.d.ts"
+        },
+        "./Label": {
+            "import": "./dist/Label/index.js",
+            "types": "./dist/Label/index.d.ts"
+        },
+        "./Link": {
+            "import": "./dist/Link/index.js",
+            "types": "./dist/Link/index.d.ts"
+        },
+        "./Modal": {
+            "import": "./dist/Modal/index.js",
+            "types": "./dist/Modal/index.d.ts"
+        },
+        "./RadioGroup": {
+            "import": "./dist/RadioGroup/index.js",
+            "types": "./dist/RadioGroup/index.d.ts"
+        },
+        "./Select": {
+            "import": "./dist/Select/index.js",
+            "types": "./dist/Select/index.d.ts"
+        },
+        "./Stack": {
+            "import": "./dist/Stack/index.js",
+            "types": "./dist/Stack/index.d.ts"
+        },
+        "./Switch": {
+            "import": "./dist/Switch/index.js",
+            "types": "./dist/Switch/index.d.ts"
+        },
+        "./Tabs": {
+            "import": "./dist/Tabs/index.js",
+            "types": "./dist/Tabs/index.d.ts"
+        },
+        "./TextArea": {
+            "import": "./dist/TextArea/index.js",
+            "types": "./dist/TextArea/index.d.ts"
+        },
+        "./TextField": {
+            "import": "./dist/TextField/index.js",
+            "types": "./dist/TextField/index.d.ts"
+        },
+        "./Toast": {
+            "import": "./dist/Toast/index.js",
+            "types": "./dist/Toast/index.d.ts"
+        },
+        "./ToggleButton": {
+            "import": "./dist/ToggleButton/index.js",
+            "types": "./dist/ToggleButton/index.d.ts"
+        },
+        "./ToggleButtonGroup": {
+            "import": "./dist/ToggleButtonGroup/index.js",
+            "types": "./dist/ToggleButtonGroup/index.d.ts"
+        },
+        "./Tooltip": {
+            "import": "./dist/Tooltip/index.js",
+            "types": "./dist/Tooltip/index.d.ts"
+        },
+        "./reset.css": "./dist/reset.css",
+        "./typography.css": "./dist/typography.css"
+    },
+    "scripts": {
+        "build": "tsdown",
+        "dev": "tsdown --watch",
+        "typecheck": "tsc --noEmit",
+        "clean": "rm -rf .turbo node_modules dist"
+    },
+    "dependencies": {
+        "@octoev/mosaic-icons": "workspace:*",
+        "class-variance-authority": "^0.7.1",
+        "react-aria-components": "^1.20.0"
+    },
+    "devDependencies": {
+        "@repo/typescript-config": "workspace:*",
+        "@tsdown/css": "catalog:",
+        "@types/react": "catalog:",
+        "@types/react-dom": "catalog:",
+        "tsdown": "catalog:",
+        "typescript": "catalog:"
+    },
+    "peerDependencies": {
+        "react": "^19.3.0",
+        "react-dom": "^19.3.0"
+    }
+}

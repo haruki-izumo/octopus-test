@@ -1,0 +1,100 @@
+.region {
+    display: flex;
+    flex-direction: column-reverse;
+    gap: var(--mds-toast-spacing-region-gap);
+    outline: none;
+    position: fixed;
+    z-index: var(--mds-toast-z-index);
+
+    &[data-focus-visible] {
+        outline: var(--mds-toast-border-focus);
+        outline-offset: 4px;
+    }
+}
+
+.bottomRight {
+    bottom: var(--mds-toast-spacing-offset);
+    right: var(--mds-toast-spacing-offset);
+}
+
+.bottomLeft {
+    bottom: var(--mds-toast-spacing-offset);
+    left: var(--mds-toast-spacing-offset);
+}
+
+.topRight {
+    right: var(--mds-toast-spacing-offset);
+    top: var(--mds-toast-spacing-offset);
+}
+
+.topLeft {
+    left: var(--mds-toast-spacing-offset);
+    top: var(--mds-toast-spacing-offset);
+}
+
+.toast {
+    outline: none;
+    width: var(--mds-toast-spacing-width);
+    max-width: calc(var(--mds-toast-spacing-max-width) - var(--mds-toast-spacing-offset) * 2);
+
+    &[data-focus-visible] {
+        outline: var(--mds-toast-border-focus);
+        outline-offset: 2px;
+    }
+}
+
+.bottomRight .toast,
+.topRight .toast {
+    view-transition-class: toast-right;
+}
+
+.bottomLeft .toast,
+.topLeft .toast {
+    view-transition-class: toast-left;
+}
+
+::view-transition-new(.toast-right):only-child {
+    animation: toast-slide-in-right var(--mds-toast-animation-duration-enter) ease-out;
+}
+
+::view-transition-old(.toast-right):only-child {
+    animation: toast-slide-out-right var(--mds-toast-animation-duration-exit) ease-in forwards;
+}
+
+::view-transition-new(.toast-left):only-child {
+    animation: toast-slide-in-left var(--mds-toast-animation-duration-enter) ease-out;
+}
+
+::view-transition-old(.toast-left):only-child {
+    animation: toast-slide-out-left var(--mds-toast-animation-duration-exit) ease-in forwards;
+}
+
+@keyframes toast-slide-in-right {
+    from {
+        opacity: 0;
+        translate: 100% 0;
+    }
+}
+
+@keyframes toast-slide-out-right {
+    to {
+        opacity: 0;
+        translate: 100% 0;
+        visibility: hidden;
+    }
+}
+
+@keyframes toast-slide-in-left {
+    from {
+        opacity: 0;
+        translate: -100% 0;
+    }
+}
+
+@keyframes toast-slide-out-left {
+    to {
+        opacity: 0;
+        translate: -100% 0;
+        visibility: hidden;
+    }
+}

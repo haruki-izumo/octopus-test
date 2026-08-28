@@ -1,0 +1,53 @@
+{
+    "$schema": "https://www.designtokens.org/schemas/2025.10/format.json",
+    "typography": {
+        "font-family": {
+            "chromatophore": {
+                "$type": "fontFamily",
+                "$value": ["Chromatophore", "sans-serif"]
+            },
+            "inter": {
+                "$type": "fontFamily",
+                "$value": ["Inter", "sans-serif"]
+            }
+        },
+        "font-weight": {
+            "100": {
+                "$type": "fontWeight",
+                "$value": 100
+            },
+            "200": {
+                "$type": "fontWeight",
+                "$value": 200
+            },
+            "300": {
+                "$type": "fontWeight",
+                "$value": 300
+            },
+            "400": {
+                "$type": "fontWeight",
+                "$value": 400
+            },
+            "500": {
+                "$type": "fontWeight",
+                "$value": 500
+            },
+            "600": {
+                "$type": "fontWeight",
+                "$value": 600
+            },
+            "700": {
+                "$type": "fontWeight",
+                "$value": 700
+            },
+            "800": {
+                "$type": "fontWeight",
+                "$value": 800
+            },
+            "900": {
+                "$type": "fontWeight",
+                "$value": 900
+            }
+        }
+    }
+}

@@ -1,0 +1,35 @@
+{
+    "$schema": "https://json.schemastore.org/package.json",
+    "name": "@octoev/mosaic-icons",
+    "version": "0.3.0",
+    "description": "",
+    "license": "UNLICENSED",
+    "files": [
+        "dist"
+    ],
+    "type": "module",
+    "exports": {
+        ".": {
+            "import": "./dist/index.js",
+            "types": "./dist/index.d.ts"
+        }
+    },
+    "scripts": {
+        "build": "tsdown",
+        "typecheck": "tsc --noEmit",
+        "clean": "rm -rf .turbo node_modules dist",
+        "test": "echo \"No tests\""
+    },
+    "dependencies": {
+        "lucide-react": "^1.30.0"
+    },
+    "devDependencies": {
+        "@repo/typescript-config": "workspace:*",
+        "@types/react": "catalog:",
+        "tsdown": "catalog:",
+        "typescript": "catalog:"
+    },
+    "peerDependencies": {
+        "react": "^19.3.0"
+    }
+}

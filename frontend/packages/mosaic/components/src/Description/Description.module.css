@@ -1,0 +1,11 @@
+.description {
+    color: var(--mds-description-color-content-default);
+    contain: inline-size;
+    display: block;
+    font: var(--mds-description-typography);
+    margin-top: var(--mds-description-spacing-stack);
+}
+
+[data-invalid] > .description {
+    display: none;
+}

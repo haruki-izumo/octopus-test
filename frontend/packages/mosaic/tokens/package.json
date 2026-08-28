@@ -1,0 +1,46 @@
+{
+    "$schema": "https://json.schemastore.org/package.json",
+    "name": "@octoev/mosaic-tokens",
+    "version": "2.0.0",
+    "description": "",
+    "license": "UNLICENSED",
+    "files": [
+        "dist",
+        "css.d.ts"
+    ],
+    "type": "module",
+    "exports": {
+        "./octopus/light": {
+            "types": "./css.d.ts",
+            "default": "./dist/css/octopus-light.css"
+        },
+        "./octopus/dark": {
+            "types": "./css.d.ts",
+            "default": "./dist/css/octopus-dark.css"
+        },
+        "./mantle/light": {
+            "types": "./css.d.ts",
+            "default": "./dist/css/mantle-light.css"
+        },
+        "./mantle/dark": {
+            "types": "./css.d.ts",
+            "default": "./dist/css/mantle-dark.css"
+        },
+        "./octopus/light/json": "./dist/json/octopus-light.json",
+        "./octopus/dark/json": "./dist/json/octopus-dark.json",
+        "./mantle/light/json": "./dist/json/mantle-light.json",
+        "./mantle/dark/json": "./dist/json/mantle-dark.json"
+    },
+    "scripts": {
+        "build": "node src/build.ts",
+        "typecheck": "tsc --noEmit",
+        "clean": "rm -rf .turbo node_modules dist",
+        "test": "echo \"No tests\""
+    },
+    "devDependencies": {
+        "@repo/typescript-config": "workspace:*",
+        "style-dictionary": "^5.5.0",
+        "style-dictionary-utils": "^6.0.1",
+        "typescript": "catalog:"
+    }
+}

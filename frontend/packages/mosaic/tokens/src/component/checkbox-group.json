@@ -1,0 +1,13 @@
+{
+    "$schema": "https://www.designtokens.org/schemas/2025.10/format.json",
+    "checkbox-group": {
+        "spacing": {
+            "block": {
+                "$value": "{spacing.1}"
+            },
+            "item-gap": {
+                "$value": "{spacing.2}"
+            }
+        }
+    }
+}

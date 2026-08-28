@@ -1,0 +1,87 @@
+{
+    "$schema": "https://www.designtokens.org/schemas/2025.10/format.json",
+    "text-field": {
+        "border": {
+            "width": {
+                "$value": "{border.width.small}"
+            },
+            "radius": {
+                "$value": "{border.radius.medium}"
+            }
+        },
+        "color": {
+            "background": {
+                "default": {
+                    "$value": "{color.background.default}"
+                },
+                "hover": {
+                    "$value": "{color.background.default}"
+                },
+                "active": {
+                    "$value": "{color.background.default}"
+                },
+                "disabled": {
+                    "$value": "{color.background.default}"
+                },
+                "danger": {
+                    "$value": "{color.action.danger.background.default}"
+                }
+            },
+            "border": {
+                "default": {
+                    "$value": "{color.border.default}"
+                },
+                "hover": {
+                    "$value": "{color.border.default}"
+                },
+                "active": {
+                    "$value": "{color.action.primary.border.active}"
+                },
+                "disabled": {
+                    "$value": "{color.border.default}"
+                },
+                "danger": {
+                    "$value": "{color.action.danger.border.default}"
+                }
+            },
+            "content": {
+                "default": {
+                    "$value": "{color.content.default}"
+                },
+                "hover": {
+                    "$value": "{color.content.default}"
+                },
+                "active": {
+                    "$value": "{color.content.default}"
+                },
+                "disabled": {
+                    "$value": "{color.content.disabled}"
+                },
+                "danger": {
+                    "$value": "{color.action.danger.content.active}"
+                }
+            }
+        },
+        "spacing": {
+            "stack": {
+                "$value": "{spacing.1}"
+            },
+            "input": {
+                "height": {
+                    "$value": "{spacing.4}"
+                },
+                "padding": {
+                    "x": {
+                        "$value": "{spacing.4}"
+                    },
+                    "y": {
+                        "$value": "{spacing.4}"
+                    }
+                }
+            }
+        },
+        "typography": {
+            "$value": "{typography.body}"
+        }
+    }
+}

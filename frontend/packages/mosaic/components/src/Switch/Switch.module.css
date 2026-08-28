@@ -1,0 +1,88 @@
+.switch {
+    display: flex;
+    flex-direction: column;
+    gap: var(--mds-switch-spacing-block);
+}
+
+.switchButton {
+    align-items: center;
+    color: var(--mds-switch-color-content-default);
+    display: flex;
+    font: var(--mds-switch-typography);
+    gap: var(--mds-switch-spacing-inline);
+    position: relative;
+
+    .track {
+        background-color: var(--mds-switch-color-background-track-default);
+        border: var(--mds-switch-border-width) solid var(--mds-switch-color-border-default);
+        border-radius: var(--mds-switch-border-radius-track);
+        height: var(--mds-switch-spacing-track-height);
+        padding: var(--mds-switch-spacing-track-padding);
+        width: var(--mds-switch-spacing-track-width);
+
+        .handle {
+            aspect-ratio: 1;
+            background-color: var(--mds-switch-color-background-handle-default);
+            border-radius: var(--mds-switch-border-radius-handle);
+            display: block;
+            height: 100%;
+            transition: all 0.2s;
+        }
+    }
+
+    &[data-hovered] {
+        cursor: pointer;
+    }
+
+    &[data-pressed] .handle {
+        background-color: var(--mds-switch-color-background-handle-hover);
+    }
+
+    &[data-invalid] {
+        .track {
+            border-color: var(--mds-switch-color-border-danger);
+        }
+
+        .handle {
+            background-color: var(--mds-switch-color-background-handle-danger);
+        }
+    }
+
+    &[data-selected] {
+        .track {
+            background-color: var(--mds-switch-color-background-track-active);
+            border-color: var(--mds-switch-color-border-active);
+        }
+
+        .handle {
+            background-color: var(--mds-switch-color-background-handle-active);
+            transform: translateX(
+                calc(var(--mds-switch-spacing-track-width) - var(--mds-switch-spacing-track-height))
+            );
+        }
+
+        &[data-invalid] {
+            .track {
+                border-color: var(--mds-switch-color-border-danger);
+            }
+        }
+    }
+
+    &[data-focus-visible] .track {
+        outline: var(--mds-switch-border-focus);
+        outline-offset: 2px;
+    }
+
+    &[data-disabled] {
+        color: var(--mds-switch-color-content-disabled);
+
+        .track {
+            background-color: var(--mds-switch-color-background-track-disabled);
+            border-color: var(--mds-switch-color-border-disabled);
+        }
+
+        .handle {
+            background-color: var(--mds-switch-color-background-handle-disabled);
+        }
+    }
+}

@@ -1,0 +1,15 @@
+{
+    "$schema": "https://www.designtokens.org/schemas/2025.10/format.json",
+    "label": {
+        "color": {
+            "content": {
+                "default": {
+                    "$value": "{color.content.default}"
+                }
+            }
+        },
+        "typography": {
+            "$value": "{typography.label}"
+        }
+    }
+}

@@ -1,0 +1,102 @@
+.stack {
+    display: flex;
+}
+
+.horizontal {
+    flex-direction: row;
+}
+
+.vertical {
+    flex-direction: column;
+}
+
+.mainStart {
+    justify-content: flex-start;
+}
+
+.mainCenter {
+    justify-content: center;
+}
+
+.mainEnd {
+    justify-content: flex-end;
+}
+
+.mainBetween {
+    justify-content: space-between;
+}
+
+.mainAround {
+    justify-content: space-around;
+}
+
+.mainEvenly {
+    justify-content: space-evenly;
+}
+
+.crossStart {
+    align-items: flex-start;
+}
+
+.crossCenter {
+    align-items: center;
+}
+
+.crossEnd {
+    align-items: flex-end;
+}
+
+.crossStretch {
+    align-items: stretch;
+}
+
+.gap {
+    gap: var(--stack-gap);
+}
+
+.nowrap {
+    flex-wrap: nowrap;
+}
+
+.wrap {
+    flex-wrap: wrap;
+}
+
+.wrapReverse {
+    flex-wrap: wrap-reverse;
+}
+
+.scrollable {
+    overflow: auto;
+}
+
+.item {
+    /* Flex items default to `min-size: auto`; reset so they can shrink and scroll. */
+    min-height: 0;
+    min-width: 0;
+}
+
+.itemStatic {
+    flex-grow: 0;
+    flex-shrink: 0;
+}
+
+.itemFill {
+    flex: 1 1 0%;
+}
+
+.itemAlignSelfStart {
+    align-self: flex-start;
+}
+
+.itemAlignSelfCenter {
+    align-self: center;
+}
+
+.itemAlignSelfEnd {
+    align-self: flex-end;
+}
+
+.itemAlignSelfStretch {
+    align-self: stretch;
+}

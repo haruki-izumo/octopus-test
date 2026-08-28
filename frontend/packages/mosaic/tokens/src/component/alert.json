@@ -1,0 +1,171 @@
+{
+    "$schema": "https://www.designtokens.org/schemas/2025.10/format.json",
+    "alert": {
+        "border": {
+            "radius": {
+                "$value": "{border.radius.medium}"
+            },
+            "width": {
+                "$value": "{border.width.medium}"
+            },
+            "focus": {
+                "$value": "{border.focus}"
+            }
+        },
+        "spacing": {
+            "padding": {
+                "block": {
+                    "$value": "{spacing.4}"
+                },
+                "inline": {
+                    "$value": "{spacing.4}"
+                }
+            },
+            "gap": {
+                "$value": "{spacing.2}"
+            },
+            "icon": {
+                "size": {
+                    "$type": "dimension",
+                    "$value": {
+                        "value": 20,
+                        "unit": "px"
+                    }
+                },
+                "gap": {
+                    "$value": "{spacing.0-5}"
+                }
+            }
+        },
+        "typography": {
+            "title": {
+                "$value": "{typography.body}"
+            },
+            "description": {
+                "$value": "{typography.body-small}"
+            }
+        },
+        "color": {
+            "information": {
+                "solid": {
+                    "background": {
+                        "$value": "{color.semantic.information.tone}"
+                    },
+                    "border": {
+                        "$value": "{color.semantic.information.tone}"
+                    },
+                    "content": {
+                        "$value": "{color.content.default}"
+                    },
+                    "icon": {
+                        "$value": "{color.semantic.information.default}"
+                    }
+                },
+                "bordered": {
+                    "background": {
+                        "$value": "{color.named.white}"
+                    },
+                    "border": {
+                        "$value": "{color.semantic.information.default}"
+                    },
+                    "content": {
+                        "$value": "{color.content.default}"
+                    },
+                    "icon": {
+                        "$value": "{color.semantic.information.default}"
+                    }
+                }
+            },
+            "success": {
+                "solid": {
+                    "background": {
+                        "$value": "{color.semantic.success.tone}"
+                    },
+                    "border": {
+                        "$value": "{color.semantic.success.tone}"
+                    },
+                    "content": {
+                        "$value": "{color.content.default}"
+                    },
+                    "icon": {
+                        "$value": "{color.semantic.success.default}"
+                    }
+                },
+                "bordered": {
+                    "background": {
+                        "$value": "{color.named.white}"
+                    },
+                    "border": {
+                        "$value": "{color.semantic.success.default}"
+                    },
+                    "content": {
+                        "$value": "{color.content.default}"
+                    },
+                    "icon": {
+                        "$value": "{color.semantic.success.default}"
+                    }
+                }
+            },
+            "danger": {
+                "solid": {
+                    "background": {
+                        "$value": "{color.semantic.danger.default}"
+                    },
+                    "border": {
+                        "$value": "{color.semantic.danger.default}"
+                    },
+                    "content": {
+                        "$value": "{color.named.white}"
+                    },
+                    "icon": {
+                        "$value": "{color.named.white}"
+                    }
+                },
+                "bordered": {
+                    "background": {
+                        "$value": "{color.named.white}"
+                    },
+                    "border": {
+                        "$value": "{color.semantic.danger.default}"
+                    },
+                    "content": {
+                        "$value": "{color.content.default}"
+                    },
+                    "icon": {
+                        "$value": "{color.semantic.danger.default}"
+                    }
+                }
+            },
+            "warning": {
+                "solid": {
+                    "background": {
+                        "$value": "{color.semantic.warning.tone}"
+                    },
+                    "border": {
+                        "$value": "{color.semantic.warning.tone}"
+                    },
+                    "content": {
+                        "$value": "{color.content.default}"
+                    },
+                    "icon": {
+                        "$value": "{color.semantic.warning.default}"
+                    }
+                },
+                "bordered": {
+                    "background": {
+                        "$value": "{color.named.white}"
+                    },
+                    "border": {
+                        "$value": "{color.semantic.warning.default}"
+                    },
+                    "content": {
+                        "$value": "{color.content.default}"
+                    },
+                    "icon": {
+                        "$value": "{color.semantic.warning.default}"
+                    }
+                }
+            }
+        }
+    }
+}

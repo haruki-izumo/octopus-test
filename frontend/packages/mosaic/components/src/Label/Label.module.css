@@ -1,0 +1,4 @@
+.label {
+    color: var(--mds-label-color-content-default);
+    font: var(--mds-label-typography);
+}

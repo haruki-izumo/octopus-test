@@ -1,0 +1,15 @@
+.checkboxGroup {
+    display: flex;
+    flex-direction: column;
+    gap: var(--mds-checkbox-group-spacing-block);
+}
+
+.items {
+    display: flex;
+    flex-direction: column;
+    gap: var(--mds-checkbox-group-spacing-item-gap);
+}
+
+.checkboxGroup[data-disabled] {
+    opacity: 1;
+}

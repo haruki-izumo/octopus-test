@@ -1,0 +1,119 @@
+.radioGroup {
+    display: flex;
+    flex-direction: column;
+    gap: var(--mds-radio-group-spacing-item-gap);
+    font: var(--mds-radio-group-typography);
+    color: var(--mds-radio-group-color-content-default);
+}
+
+.radioItems {
+    display: flex;
+    flex-direction: column;
+    gap: var(--mds-radio-group-spacing-item-gap);
+}
+
+.radioGroup[data-orientation="horizontal"] .radioItems {
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: var(--mds-radio-group-spacing-horizontal-gap);
+}
+
+.error {
+    font: var(--mds-radio-group-typography);
+    color: var(--mds-radio-group-color-content-danger);
+}
+
+.radioField {
+    display: flex;
+    flex-direction: column;
+
+    [slot="description"] {
+        margin-left: calc(
+            var(--mds-radio-group-spacing-indicator-size) +
+            var(--mds-radio-group-spacing-radio-gap)
+        );
+    }
+}
+
+.radioButton {
+    display: flex;
+    position: relative;
+    align-items: center;
+    gap: var(--mds-radio-group-spacing-radio-gap);
+    cursor: pointer;
+    -webkit-tap-highlight-color: transparent;
+
+    &[data-disabled] {
+        cursor: default;
+        color: var(--mds-radio-group-color-content-disabled);
+    }
+}
+
+.indicator {
+    position: relative;
+    width: var(--mds-radio-group-spacing-indicator-size);
+    height: var(--mds-radio-group-spacing-indicator-size);
+    flex-shrink: 0;
+    box-sizing: border-box;
+    border-radius: var(--mds-radio-group-border-radius);
+    border: var(--mds-radio-group-border-width) solid var(--mds-radio-group-color-border-default);
+    background-color: var(--mds-radio-group-color-background-default);
+    transition:
+        background-color 150ms ease,
+        border-color 150ms ease;
+
+    &::after {
+        content: "";
+        position: absolute;
+        inset: var(--mds-radio-group-spacing-indicator-inner-gap);
+        border-radius: inherit;
+        background: transparent;
+        transition: opacity 150ms ease;
+        opacity: 0;
+    }
+}
+
+.radioButton[data-selected] .indicator {
+    border-color: var(--mds-radio-group-color-border-active);
+
+    &::after {
+        background: var(--mds-radio-group-color-background-active);
+        opacity: 1;
+    }
+}
+
+.radioButton[data-focus-visible] .indicator {
+    outline: var(--mds-radio-group-border-focus);
+    outline-offset: 2px;
+}
+
+.radioButton[data-disabled] .indicator {
+    border-color: var(--mds-radio-group-color-border-disabled);
+    background-color: var(--mds-radio-group-color-background-default);
+}
+
+.radioButton[data-disabled][data-selected] .indicator {
+    border-color: var(--mds-radio-group-color-border-disabled);
+
+    &::after {
+        background: var(--mds-radio-group-color-background-disabled);
+        opacity: 1;
+    }
+}
+
+.radioButton[data-invalid] .indicator {
+    border-color: var(--mds-radio-group-color-border-danger);
+}
+
+.radioButton[data-invalid][data-selected] .indicator {
+    border-color: var(--mds-radio-group-color-border-danger);
+
+    &::after {
+        background: var(--mds-radio-group-color-background-danger);
+        opacity: 1;
+    }
+}
+
+.radioButton[data-hovered] .indicator {
+    border-color: var(--mds-radio-group-color-border-hover);
+}

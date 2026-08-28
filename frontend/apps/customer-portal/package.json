@@ -1,0 +1,38 @@
+{
+    "name": "customer-portal",
+    "version": "0.0.0",
+    "private": true,
+    "type": "module",
+    "scripts": {
+        "dev": "next dev --port 3000",
+        "build": "next build",
+        "start": "next start --port 3000",
+        "typecheck": "next typegen && tsc --noEmit",
+        "test": "vitest run",
+        "test:watch": "vitest"
+    },
+    "dependencies": {
+        "@hookform/resolvers": "catalog:",
+        "@octoev/mosaic": "workspace:*",
+        "@octoev/mosaic-icons": "workspace:*",
+        "@octoev/mosaic-tokens": "workspace:*",
+        "next": "catalog:",
+        "react": "catalog:",
+        "react-dom": "catalog:",
+        "react-hook-form": "catalog:",
+        "yup": "catalog:"
+    },
+    "devDependencies": {
+        "@repo/typescript-config": "workspace:*",
+        "@repo/vitest-config": "workspace:*",
+        "@testing-library/dom": "catalog:",
+        "@testing-library/react": "catalog:",
+        "@testing-library/user-event": "catalog:",
+        "@types/node": "catalog:",
+        "@types/react": "catalog:",
+        "@types/react-dom": "catalog:",
+        "jsdom": "catalog:",
+        "typescript": "catalog:",
+        "vitest": "catalog:"
+    }
+}

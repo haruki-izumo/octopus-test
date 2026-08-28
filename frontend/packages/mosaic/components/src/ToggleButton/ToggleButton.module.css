@@ -1,0 +1,55 @@
+.toggleButton {
+    align-items: center;
+    appearance: none;
+    background-color: var(--mds-toggle-button-color-background-default);
+    border: var(--mds-toggle-button-border-width) solid var(--mds-toggle-button-color-border);
+    border-radius: var(--mds-toggle-button-border-radius-default);
+    color: var(--mds-toggle-button-color-content-default);
+    cursor: pointer;
+    display: inline-flex;
+    font: var(--mds-toggle-button-typography);
+    gap: var(--mds-toggle-button-spacing-gap);
+    justify-content: center;
+    margin: 0;
+    outline: none;
+    padding: var(--mds-toggle-button-spacing-padding-block-default)
+        var(--mds-toggle-button-spacing-padding-inline-default);
+    text-align: center;
+    text-decoration: none;
+    vertical-align: middle;
+
+    &[data-selected] {
+        background-color: var(--mds-toggle-button-color-background-active);
+    }
+
+    &[data-hovered] {
+        background-color: var(--mds-toggle-button-color-background-hover);
+    }
+
+    &[data-focus-visible] {
+        outline: var(--mds-toggle-button-border-focus);
+        outline-offset: 2px;
+    }
+
+    &[data-disabled] {
+        color: var(--mds-toggle-button-color-content-disabled);
+        cursor: not-allowed;
+    }
+
+    > span {
+        align-items: center;
+        display: flex;
+        justify-content: center;
+    }
+
+    > span > svg {
+        height: var(--mds-toggle-button-spacing-icon-size);
+        width: var(--mds-toggle-button-spacing-icon-size);
+    }
+
+    &:has(> span > svg:only-child) {
+        border-radius: var(--mds-toggle-button-border-radius-icon);
+        padding: var(--mds-toggle-button-spacing-padding-block-icon)
+            var(--mds-toggle-button-spacing-padding-inline-icon);
+    }
+}

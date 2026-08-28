@@ -1,0 +1,87 @@
+{
+    "$schema": "https://www.designtokens.org/schemas/2025.10/format.json",
+    "radio-group": {
+        "border": {
+            "focus": {
+                "$value": "{border.focus}"
+            },
+            "width": {
+                "$value": "{border.width.small}"
+            },
+            "radius": {
+                "$value": "{border.radius.circle}"
+            }
+        },
+        "color": {
+            "background": {
+                "default": {
+                    "$value": "{color.background.default}"
+                },
+                "active": {
+                    "$value": "{color.action.primary.background.default}"
+                },
+                "disabled": {
+                    "$value": "{color.content.disabled}"
+                },
+                "danger": {
+                    "$value": "{color.action.danger.border.default}"
+                }
+            },
+            "border": {
+                "default": {
+                    "$value": "{color.border.default}"
+                },
+                "hover": {
+                    "$value": "{color.action.primary.border.hover}"
+                },
+                "active": {
+                    "$value": "{color.action.primary.border.default}"
+                },
+                "disabled": {
+                    "$value": "{color.content.disabled}"
+                },
+                "danger": {
+                    "$value": "{color.action.danger.border.default}"
+                }
+            },
+            "content": {
+                "default": {
+                    "$value": "{color.content.default}"
+                },
+                "disabled": {
+                    "$value": "{color.content.disabled}"
+                },
+                "danger": {
+                    "$value": "{color.action.danger.border.default}"
+                },
+                "description": {
+                    "$value": "{color.content.muted}"
+                }
+            }
+        },
+        "spacing": {
+            "item-gap": {
+                "$value": "{spacing.2}"
+            },
+            "radio-gap": {
+                "$value": "{spacing.2}"
+            },
+            "horizontal-gap": {
+                "$value": "{spacing.4}"
+            },
+            "indicator-size": {
+                "$type": "dimension",
+                "$value": {
+                    "value": 24,
+                    "unit": "px"
+                }
+            },
+            "indicator-inner-gap": {
+                "$value": "{spacing.1}"
+            }
+        },
+        "typography": {
+            "$value": "{typography.body}"
+        }
+    }
+}

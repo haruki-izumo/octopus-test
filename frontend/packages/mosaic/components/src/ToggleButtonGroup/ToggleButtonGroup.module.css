@@ -1,0 +1,30 @@
+.toggleButtonGroup {
+    display: flex;
+    flex-direction: row;
+
+    > [data-toggle-button] {
+        border-radius: 0;
+        margin-inline-start: -1px;
+        z-index: 1;
+
+        &:first-child {
+            border-radius: var(--mds-toggle-button-group-border-radius) 0 0
+                var(--mds-toggle-button-group-border-radius);
+            margin-inline-start: 0;
+        }
+
+        &:last-child {
+            border-radius: 0 var(--mds-toggle-button-group-border-radius)
+                var(--mds-toggle-button-group-border-radius) 0;
+        }
+
+        &[data-disabled] {
+            z-index: 0;
+        }
+
+        &[data-selected],
+        &[data-focus-visible] {
+            z-index: 2;
+        }
+    }
+}

@@ -1,0 +1,22 @@
+.link {
+    border-radius: var(--mds-link-border-radius);
+    color: var(--mds-link-color-content-default);
+    cursor: pointer;
+
+    &[data-hovered] {
+        color: var(--mds-link-color-content-hover);
+    }
+
+    &[data-pressed] {
+        color: var(--mds-link-color-content-active);
+    }
+
+    &[data-focus-visible] {
+        outline: var(--mds-link-border-focus);
+    }
+
+    &[data-disabled] {
+        cursor: default;
+        color: var(--mds-link-color-content-disabled);
+    }
+}

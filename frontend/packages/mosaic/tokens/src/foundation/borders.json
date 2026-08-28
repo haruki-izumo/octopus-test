@@ -1,0 +1,83 @@
+{
+    "$schema": "https://www.designtokens.org/schemas/2025.10/format.json",
+    "border": {
+        "radius": {
+            "none": {
+                "$type": "dimension",
+                "$value": {
+                    "value": 0,
+                    "unit": "px"
+                }
+            },
+            "small": {
+                "$type": "dimension",
+                "$value": {
+                    "value": 4,
+                    "unit": "px"
+                }
+            },
+            "medium": {
+                "$type": "dimension",
+                "$value": {
+                    "value": 8,
+                    "unit": "px"
+                }
+            },
+            "large": {
+                "$type": "dimension",
+                "$value": {
+                    "value": 16,
+                    "unit": "px"
+                }
+            },
+            "pill": {
+                "$type": "dimension",
+                "$value": {
+                    "value": 999,
+                    "unit": "px"
+                }
+            },
+            "circle": {
+                "$value": "50%"
+            }
+        },
+        "width": {
+            "small": {
+                "$type": "dimension",
+                "$value": {
+                    "value": 1,
+                    "unit": "px"
+                }
+            },
+            "medium": {
+                "$type": "dimension",
+                "$value": {
+                    "value": 2,
+                    "unit": "px"
+                }
+            },
+            "large": {
+                "$type": "dimension",
+                "$value": {
+                    "value": 4,
+                    "unit": "px"
+                }
+            },
+            "xlarge": {
+                "$type": "dimension",
+                "$value": {
+                    "value": 8,
+                    "unit": "px"
+                }
+            }
+        },
+        "focus": {
+            "$type": "border",
+            "$value": {
+                "color": "{color.pacific.700}",
+                "width": "{border.width.medium}",
+                "style": "solid"
+            }
+        }
+    }
+}

@@ -1,0 +1,29 @@
+{
+    "$schema": "https://www.designtokens.org/schemas/2025.10/format.json",
+    "link": {
+        "border": {
+            "focus": {
+                "$value": "{border.focus}"
+            },
+            "radius": {
+                "$value": "{border.radius.small}"
+            }
+        },
+        "color": {
+            "content": {
+                "default": {
+                    "$value": "{color.content.default}"
+                },
+                "hover": {
+                    "$value": "{color.content.attention}"
+                },
+                "active": {
+                    "$value": "{color.content.attention}"
+                },
+                "disabled": {
+                    "$value": "{color.content.disabled}"
+                }
+            }
+        }
+    }
+}

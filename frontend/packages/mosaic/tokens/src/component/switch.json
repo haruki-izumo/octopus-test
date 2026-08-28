@@ -1,0 +1,103 @@
+{
+    "$schema": "https://www.designtokens.org/schemas/2025.10/format.json",
+    "switch": {
+        "border": {
+            "focus": {
+                "$value": "{border.focus}"
+            },
+            "radius": {
+                "track": {
+                    "$value": "{border.radius.pill}"
+                },
+                "handle": {
+                    "$value": "{border.radius.circle}"
+                }
+            },
+            "width": {
+                "$value": "{border.width.small}"
+            }
+        },
+        "color": {
+            "background": {
+                "handle": {
+                    "default": {
+                        "$value": "{color.background.shade-1}"
+                    },
+                    "hover": {
+                        "$value": "{color.action.primary.background.default}"
+                    },
+                    "active": {
+                        "$value": "{color.action.primary.background.default}"
+                    },
+                    "danger": {
+                        "$value": "{color.action.danger.background.default}"
+                    },
+                    "disabled": {
+                        "$value": "{color.content.disabled}"
+                    }
+                },
+                "track": {
+                    "default": {
+                        "$value": "transparent"
+                    },
+                    "hover": {
+                        "$value": "{color.action.secondary.background.default}"
+                    },
+                    "active": {
+                        "$value": "{color.background.shade-1}"
+                    },
+                    "danger": {
+                        "$value": "{color.action.danger.background.default}"
+                    },
+                    "disabled": {
+                        "$value": "{color.action.disabled}"
+                    }
+                }
+            },
+            "border": {
+                "default": {
+                    "$value": "{color.border.default}"
+                },
+                "active": {
+                    "$value": "{color.action.primary.border.default}"
+                },
+                "danger": {
+                    "$value": "{color.action.danger.border.default}"
+                },
+                "disabled": {
+                    "$value": "{color.action.disabled}"
+                }
+            },
+            "content": {
+                "default": {
+                    "$value": "{color.content.default}"
+                },
+                "disabled": {
+                    "$value": "{color.content.disabled}"
+                }
+            }
+        },
+        "spacing": {
+            "block": {
+                "$value": "{spacing.1}"
+            },
+            "inline": {
+                "$value": "{spacing.2}"
+            },
+            "track": {
+                "height": {
+                    "$value": "24px"
+                },
+                "padding": {
+                    "$value": "{spacing.0-5}"
+                },
+                "width": {
+                    "$value": "44px"
+                }
+            }
+        },
+        "typography": {
+            "$value": "{typography.body}"
+        }
+    }
+}

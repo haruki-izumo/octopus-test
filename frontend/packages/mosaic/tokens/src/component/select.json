@@ -1,0 +1,129 @@
+{
+    "$schema": "https://www.designtokens.org/schemas/2025.10/format.json",
+    "select": {
+        "border": {
+            "width": {
+                "$value": "{border.width.small}"
+            },
+            "radius": {
+                "$value": "{border.radius.medium}"
+            }
+        },
+        "color": {
+            "background": {
+                "default": {
+                    "$value": "{color.background.default}"
+                },
+                "disabled": {
+                    "$value": "{color.background.default}"
+                }
+            },
+            "border": {
+                "default": {
+                    "$value": "{color.border.default}"
+                },
+                "active": {
+                    "$value": "{color.action.primary.border.active}"
+                },
+                "danger": {
+                    "$value": "{color.action.danger.border.default}"
+                }
+            },
+            "content": {
+                "default": {
+                    "$value": "{color.content.default}"
+                },
+                "placeholder": {
+                    "$value": "{color.content.muted}"
+                },
+                "disabled": {
+                    "$value": "{color.content.disabled}"
+                },
+                "danger": {
+                    "$value": "{color.action.danger.content.active}"
+                }
+            },
+            "items": {
+                "background": {
+                    "default": {
+                        "$value": "{color.background.default}"
+                    },
+                    "hover": {
+                        "$value": "{color.action.primary.background.hover}"
+                    },
+                    "active": {
+                        "$value": "{color.action.primary.background.active}"
+                    },
+                    "disabled": {
+                        "$value": "{color.action.disabled}"
+                    },
+                    "danger": {
+                        "default": {
+                            "$value": "{color.background.default}"
+                        },
+                        "hover": {
+                            "$value": "{color.action.danger.background.hover}"
+                        },
+                        "active": {
+                            "$value": "{color.action.danger.background.active}"
+                        }
+                    }
+                },
+                "content": {
+                    "default": {
+                        "$value": "{color.content.default}"
+                    },
+                    "hover": {
+                        "$value": "{color.action.primary.content.hover}"
+                    },
+                    "active": {
+                        "$value": "{color.action.primary.content.active}"
+                    },
+                    "disabled": {
+                        "$value": "{color.named.white}"
+                    },
+                    "danger": {
+                        "default": {
+                            "$value": "{color.action.danger.content.active}"
+                        },
+                        "hover": {
+                            "$value": "{color.action.danger.content.default}"
+                        },
+                        "active": {
+                            "$value": "{color.action.danger.content.default}"
+                        }
+                    }
+                }
+            }
+        },
+        "spacing": {
+            "block": {
+                "$value": "{spacing.1}"
+            },
+            "gap": {
+                "$value": "{spacing.1}"
+            },
+            "input": {
+                "height": {
+                    "$value": "{spacing.4}"
+                },
+                "padding": {
+                    "x": {
+                        "$value": "{spacing.4}"
+                    },
+                    "y": {
+                        "$value": "{spacing.4}"
+                    }
+                }
+            },
+            "list": {
+                "max-height": {
+                    "$value": "40vh"
+                }
+            }
+        },
+        "typography": {
+            "$value": "{typography.body}"
+        }
+    }
+}

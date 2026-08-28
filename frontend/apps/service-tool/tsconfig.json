@@ -1,0 +1,11 @@
+{
+    "extends": "@repo/typescript-config/nextjs.json",
+    "compilerOptions": {
+        "types": ["node", "@repo/vitest-config/types"],
+        "paths": {
+            "@/*": ["./src/*"]
+        }
+    },
+    "include": ["next-env.d.ts", "src", "*.ts", ".next/types/**/*.ts", ".next/dev/types/**/*.ts"],
+    "exclude": ["node_modules"]
+}

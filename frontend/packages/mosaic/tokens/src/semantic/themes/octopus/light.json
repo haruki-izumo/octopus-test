@@ -1,0 +1,336 @@
+{
+    "color": {
+        "background": {
+            "default": {
+                "$value": "{color.named.white}"
+            },
+            "shade-1": {
+                "$value": "{color.grey.100}"
+            },
+            "shade-2": {
+                "$value": "{color.grey.300}"
+            },
+            "shade-3": {
+                "$value": "{color.grey.400}"
+            },
+            "backdrop": {
+                "$value": "{color.named.backdrop}"
+            }
+        },
+        "border": {
+            "default": {
+                "$value": "{color.grey.300}"
+            },
+            "subtle": {
+                "$value": "{color.grey.200}"
+            },
+            "strong": {
+                "$value": "{color.pacific.700}"
+            },
+            "accent": {
+                "$value": "{color.soho-light.300}"
+            }
+        },
+        "content": {
+            "default": {
+                "$value": "{color.named.siphon}"
+            },
+            "muted": {
+                "$value": "{color.grey.900}"
+            },
+            "disabled": {
+                "$value": "{color.grey.800}"
+            },
+            "accent": {
+                "$value": "{color.soho-light.500}"
+            },
+            "attention": {
+                "$value": "{color.pacific.700}"
+            },
+            "success": {
+                "$value": "{color.green.800}"
+            },
+            "information": {
+                "$value": "{color.purple.500}"
+            },
+            "danger": {
+                "$value": "{color.red.500}"
+            },
+            "warning": {
+                "$value": "{color.orange.500}"
+            },
+            "inverted": {
+                "$value": "{color.named.white}"
+            }
+        },
+        "semantic": {
+            "success": {
+                "tone-muted": {
+                    "$value": "{color.green.100}"
+                },
+                "tone": {
+                    "$value": "{color.green.200}"
+                },
+                "default": {
+                    "$value": "{color.green.500}"
+                }
+            },
+            "information": {
+                "tone-muted": {
+                    "$value": "{color.purple.100}"
+                },
+                "tone": {
+                    "$value": "{color.purple.200}"
+                },
+                "default": {
+                    "$value": "{color.purple.500}"
+                }
+            },
+            "danger": {
+                "tone-muted": {
+                    "$value": "{color.red.300}"
+                },
+                "tone": {
+                    "$value": "{color.red.400}"
+                },
+                "default": {
+                    "$value": "{color.red.500}"
+                }
+            },
+            "attention": {
+                "tone-muted": {
+                    "$value": "{color.sky.100}"
+                },
+                "tone": {
+                    "$value": "{color.sky.200}"
+                },
+                "default": {
+                    "$value": "{color.sky.500}"
+                }
+            },
+            "warning": {
+                "tone-muted": {
+                    "$value": "{color.orange.100}"
+                },
+                "tone": {
+                    "$value": "{color.orange.200}"
+                },
+                "default": {
+                    "$value": "{color.orange.500}"
+                }
+            }
+        },
+        "action": {
+            "disabled": {
+                "$value": "{color.grey.300}"
+            },
+            "primary": {
+                "background": {
+                    "default": {
+                        "$value": "{color.purple.700}"
+                    },
+                    "hover": {
+                        "$value": "{color.purple.600}"
+                    },
+                    "active": {
+                        "$value": "{color.purple.500}"
+                    }
+                },
+                "border": {
+                    "default": {
+                        "$value": "{color.purple.700}"
+                    },
+                    "hover": {
+                        "$value": "{color.purple.600}"
+                    },
+                    "active": {
+                        "$value": "{color.purple.500}"
+                    }
+                },
+                "content": {
+                    "default": {
+                        "$value": "{color.grey.100}"
+                    },
+                    "hover": {
+                        "$value": "{color.grey.100}"
+                    },
+                    "active": {
+                        "$value": "{color.grey.100}"
+                    }
+                }
+            },
+            "secondary": {
+                "background": {
+                    "default": {
+                        "$value": "{color.pacific.700}"
+                    },
+                    "hover": {
+                        "$value": "{color.pacific.600}"
+                    },
+                    "active": {
+                        "$value": "{color.pacific.500}"
+                    }
+                },
+                "border": {
+                    "default": {
+                        "$value": "{color.pacific.700}"
+                    },
+                    "hover": {
+                        "$value": "{color.pacific.600}"
+                    },
+                    "active": {
+                        "$value": "{color.pacific.500}"
+                    }
+                },
+                "content": {
+                    "default": {
+                        "$value": "{color.grey.100}"
+                    },
+                    "hover": {
+                        "$value": "{color.grey.100}"
+                    },
+                    "active": {
+                        "$value": "{color.grey.100}"
+                    }
+                }
+            },
+            "tertiary": {
+                "background": {
+                    "default": {
+                        "$value": "{color.grey.300}"
+                    },
+                    "hover": {
+                        "$value": "{color.grey.400}"
+                    },
+                    "active": {
+                        "$value": "{color.grey.500}"
+                    }
+                },
+                "border": {
+                    "default": {
+                        "$value": "{color.grey.300}"
+                    },
+                    "hover": {
+                        "$value": "{color.grey.400}"
+                    },
+                    "active": {
+                        "$value": "{color.grey.500}"
+                    }
+                },
+                "content": {
+                    "default": {
+                        "$value": "{color.content.default}"
+                    },
+                    "hover": {
+                        "$value": "{color.content.default}"
+                    },
+                    "active": {
+                        "$value": "{color.content.default}"
+                    }
+                }
+            },
+            "success": {
+                "background": {
+                    "default": {
+                        "$value": "{color.green.600}"
+                    },
+                    "hover": {
+                        "$value": "{color.green.700}"
+                    },
+                    "active": {
+                        "$value": "{color.green.800}"
+                    }
+                },
+                "border": {
+                    "default": {
+                        "$value": "{color.green.600}"
+                    },
+                    "hover": {
+                        "$value": "{color.green.700}"
+                    },
+                    "active": {
+                        "$value": "{color.green.800}"
+                    }
+                },
+                "content": {
+                    "default": {
+                        "$value": "{color.named.black}"
+                    },
+                    "hover": {
+                        "$value": "{color.named.black}"
+                    },
+                    "active": {
+                        "$value": "{color.named.black}"
+                    }
+                }
+            },
+            "danger": {
+                "background": {
+                    "default": {
+                        "$value": "{color.red.500}"
+                    },
+                    "hover": {
+                        "$value": "{color.red.600}"
+                    },
+                    "active": {
+                        "$value": "{color.red.700}"
+                    }
+                },
+                "border": {
+                    "default": {
+                        "$value": "{color.red.500}"
+                    },
+                    "hover": {
+                        "$value": "{color.red.600}"
+                    },
+                    "active": {
+                        "$value": "{color.red.700}"
+                    }
+                },
+                "content": {
+                    "default": {
+                        "$value": "{color.named.white}"
+                    },
+                    "hover": {
+                        "$value": "{color.named.white}"
+                    },
+                    "active": {
+                        "$value": "{color.named.white}"
+                    }
+                }
+            }
+        },
+        "icon": {
+            "default": {
+                "$value": "{color.content.default}"
+            },
+            "muted": {
+                "$value": "{color.content.muted}"
+            },
+            "disabled": {
+                "$value": "{color.content.disabled}"
+            },
+            "accent": {
+                "$value": "{color.content.accent}"
+            },
+            "attention": {
+                "$value": "{color.content.attention}"
+            },
+            "success": {
+                "$value": "{color.content.success}"
+            },
+            "information": {
+                "$value": "{color.content.information}"
+            },
+            "danger": {
+                "$value": "{color.content.danger}"
+            },
+            "warning": {
+                "$value": "{color.content.warning}"
+            },
+            "inverted": {
+                "$value": "{color.content.inverted}"
+            }
+        }
+    }
+}

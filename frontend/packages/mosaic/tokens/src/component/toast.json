@@ -1,0 +1,50 @@
+{
+    "$schema": "https://www.designtokens.org/schemas/2025.10/format.json",
+    "toast": {
+        "border": {
+            "focus": {
+                "$value": "{border.focus}"
+            }
+        },
+        "spacing": {
+            "region-gap": {
+                "$value": "{spacing.2}"
+            },
+            "offset": {
+                "$value": "{spacing.4}"
+            },
+            "width": {
+                "$type": "dimension",
+                "$value": {
+                    "value": 360,
+                    "unit": "px"
+                }
+            },
+            "max-width": {
+                "$value": "95dvw"
+            }
+        },
+        "z-index": {
+            "$type": "number",
+            "$value": 9000
+        },
+        "animation": {
+            "duration": {
+                "enter": {
+                    "$type": "duration",
+                    "$value": {
+                        "value": 400,
+                        "unit": "ms"
+                    }
+                },
+                "exit": {
+                    "$type": "duration",
+                    "$value": {
+                        "value": 200,
+                        "unit": "ms"
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,137 @@
+.base {
+    display: flex;
+    flex-direction: column;
+}
+
+.filled {
+    gap: var(--mds-accordion-spacing-item-gap-default);
+}
+
+.filledSmall {
+    gap: var(--mds-accordion-spacing-item-gap-small);
+}
+
+.item {
+    &[data-expanded] .button svg {
+        rotate: 180deg;
+    }
+
+    .outline & {
+        border-bottom: 2px solid var(--mds-accordion-color-border-default);
+
+        &:first-child {
+            border-top: 2px solid var(--mds-accordion-color-border-default);
+        }
+    }
+
+    .filled & {
+        border-radius: var(--mds-accordion-border-radius);
+        overflow: hidden;
+    }
+}
+
+.header {
+    align-items: center;
+    display: flex;
+    gap: var(--mds-accordion-spacing-header-gap);
+    justify-content: space-between;
+    width: 100%;
+}
+
+.title {
+    flex: 1;
+    margin: 0;
+}
+
+.button {
+    align-items: center;
+    background: var(--mds-accordion-color-background-default);
+    border: none;
+    box-shadow: none;
+    color: var(--mds-accordion-color-content-default);
+    display: flex;
+    font: var(--mds-accordion-typography);
+    gap: var(--mds-accordion-spacing-trigger-gap);
+    justify-content: space-between;
+    outline: none;
+    padding: var(--mds-accordion-spacing-trigger-padding-block-default)
+        var(--mds-accordion-spacing-trigger-padding-inline-default);
+    text-shadow: none;
+    width: 100%;
+    -webkit-tap-highlight-color: transparent;
+
+    &[data-hovered],
+    &[data-pressed] {
+        .filled & {
+            background-color: var(--mds-accordion-color-background-hover);
+        }
+    }
+
+    &[data-focus-visible] {
+        border-radius: var(--mds-accordion-border-radius);
+        outline: var(--mds-accordion-border-focus);
+    }
+
+    &[data-disabled] {
+        color: var(--mds-accordion-color-content-disabled);
+    }
+
+    .filled & {
+        background-color: var(--mds-accordion-color-background-filled-default);
+        padding: var(--mds-accordion-spacing-trigger-padding-block-filled-default)
+            var(--mds-accordion-spacing-trigger-padding-inline-filled-default);
+    }
+
+    .filled [data-expanded] & {
+        background-color: var(--mds-accordion-color-background-filled-active);
+    }
+
+    .small & {
+        padding: var(--mds-accordion-spacing-trigger-padding-block-small)
+            var(--mds-accordion-spacing-trigger-padding-inline-small);
+    }
+
+    .filledSmall & {
+        padding: var(--mds-accordion-spacing-trigger-padding-block-filled-small)
+            var(--mds-accordion-spacing-trigger-padding-inline-filled-small);
+    }
+}
+
+.panel {
+    height: var(--disclosure-panel-height);
+    overflow: clip;
+    transition: height 250ms;
+
+    @media (prefers-reduced-motion: reduce) {
+        transition: none;
+    }
+
+    & > div {
+        padding: var(--mds-accordion-spacing-panel-padding-block-top-default)
+            var(--mds-accordion-spacing-panel-padding-inline-left-default)
+            var(--mds-accordion-spacing-panel-padding-block-bottom-default)
+            var(--mds-accordion-spacing-panel-padding-inline-right-default);
+
+        .small & {
+            padding: var(--mds-accordion-spacing-panel-padding-block-top-small)
+                var(--mds-accordion-spacing-panel-padding-inline-left-small)
+                var(--mds-accordion-spacing-panel-padding-block-bottom-small)
+                var(--mds-accordion-spacing-panel-padding-inline-right-small);
+        }
+
+        .filled & {
+            background-color: var(--mds-accordion-color-background-filled-default);
+            padding: var(--mds-accordion-spacing-panel-padding-block-top-filled-default)
+                var(--mds-accordion-spacing-panel-padding-inline-left-filled-default)
+                var(--mds-accordion-spacing-panel-padding-block-bottom-filled-default)
+                var(--mds-accordion-spacing-panel-padding-inline-right-filled-default);
+        }
+
+        .filledSmall & {
+            padding: var(--mds-accordion-spacing-panel-padding-block-top-filled-small)
+                var(--mds-accordion-spacing-panel-padding-inline-left-filled-small)
+                var(--mds-accordion-spacing-panel-padding-block-bottom-filled-small)
+                var(--mds-accordion-spacing-panel-padding-inline-right-filled-small);
+        }
+    }
+}

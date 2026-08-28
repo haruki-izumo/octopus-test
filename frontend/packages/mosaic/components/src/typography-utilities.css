@@ -1,0 +1,69 @@
+/* Opt-in typography utility classes */
+
+.body-xsmall {
+    font: var(--mds-typography-body-xsmall);
+}
+
+.body-small {
+    font: var(--mds-typography-body-small);
+}
+
+.body {
+    font: var(--mds-typography-body);
+}
+
+.body-large {
+    font: var(--mds-typography-body-large);
+}
+
+.heading-xxsmall {
+    font: var(--mds-typography-heading-xxsmall);
+}
+
+.heading-xsmall {
+    font: var(--mds-typography-heading-xsmall);
+}
+
+.heading-small {
+    font: var(--mds-typography-heading-small);
+}
+
+.heading {
+    font: var(--mds-typography-heading);
+}
+
+.heading-large {
+    font: var(--mds-typography-heading-large);
+}
+
+.heading-xlarge {
+    font: var(--mds-typography-heading-xlarge);
+}
+
+.heading-xxlarge {
+    font: var(--mds-typography-heading-xxlarge);
+}
+
+.button-small {
+    font: var(--mds-typography-button-small);
+}
+
+.button {
+    font: var(--mds-typography-button);
+}
+
+.button-large {
+    font: var(--mds-typography-button-large);
+}
+
+.label-small {
+    font: var(--mds-typography-label-small);
+}
+
+.label {
+    font: var(--mds-typography-label);
+}
+
+.label-large {
+    font: var(--mds-typography-label-large);
+}

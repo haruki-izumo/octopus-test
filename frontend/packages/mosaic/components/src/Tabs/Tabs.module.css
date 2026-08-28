@@ -1,0 +1,50 @@
+.tabs {
+    display: flex;
+    flex-direction: column;
+    gap: var(--mds-tabs-spacing-gap);
+}
+
+.tabList {
+    align-items: center;
+    border-bottom: var(--mds-tabs-border-width-default) solid var(--mds-tabs-color-border-default);
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--mds-tabs-spacing-gap);
+}
+
+.tab {
+    padding-bottom: var(--mds-tabs-spacing-padding-block);
+    color: var(--mds-tabs-color-content-default);
+    cursor: pointer;
+    font: var(--mds-tabs-typography-default);
+    position: relative;
+
+    &[data-focus-visible] {
+        outline: 2px solid var(--mds-tabs-color-border-active);
+        outline-offset: 2px;
+    }
+
+    &[data-selected]::after {
+        background-color: var(--mds-tabs-color-border-active);
+        bottom: calc(-0.25 * var(--mds-tabs-border-width-active));
+        border-radius: var(--mds-tabs-border-radius-active);
+        content: "";
+        height: var(--mds-tabs-border-width-active);
+        left: 0;
+        position: absolute;
+        right: 0;
+    }
+
+    &[data-disabled] {
+        color: var(--mds-tabs-color-content-disabled);
+        cursor: not-allowed;
+
+        &::after {
+            background-color: var(--mds-tabs-color-border-disabled);
+        }
+    }
+
+    .small & {
+        font: var(--mds-tabs-typography-small);
+    }
+}

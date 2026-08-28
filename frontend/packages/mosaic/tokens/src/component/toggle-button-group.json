@@ -1,0 +1,10 @@
+{
+    "$schema": "https://www.designtokens.org/schemas/2025.10/format.json",
+    "toggle-button-group": {
+        "border": {
+            "radius": {
+                "$value": "{border.radius.small}"
+            }
+        }
+    }
+}

@@ -1,0 +1,35 @@
+{
+    "name": "@repo/vitest-config",
+    "version": "0.0.0",
+    "private": true,
+    "type": "module",
+    "exports": {
+        ".": "./src/index.ts",
+        "./setup": "./src/setup.ts",
+        "./types": "./src/types.d.ts"
+    },
+    "scripts": {
+        "typecheck": "tsc --noEmit"
+    },
+    "dependencies": {
+        "@testing-library/jest-dom": "catalog:",
+        "@vitejs/plugin-react": "catalog:",
+        "jsdom": "catalog:"
+    },
+    "peerDependencies": {
+        "@testing-library/react": "catalog:",
+        "vitest": "catalog:"
+    },
+    "devDependencies": {
+        "@repo/typescript-config": "workspace:*",
+        "@testing-library/dom": "catalog:",
+        "@testing-library/react": "catalog:",
+        "@types/node": "catalog:",
+        "@types/react": "catalog:",
+        "@types/react-dom": "catalog:",
+        "react": "catalog:",
+        "react-dom": "catalog:",
+        "typescript": "catalog:",
+        "vitest": "catalog:"
+    }
+}

@@ -1,0 +1,89 @@
+.overlay {
+    background-color: var(--mds-modal-color-background-overlay);
+    height: var(--page-height);
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: var(--page-width);
+    z-index: 100;
+
+    &[data-entering] {
+        animation: modal-fade 200ms;
+    }
+
+    &[data-exiting] {
+        animation: modal-fade 150ms reverse ease-in;
+    }
+}
+
+.modal {
+    background-color: var(--mds-modal-color-background-default);
+    border: var(--mds-modal-border-width) solid var(--mds-modal-color-border-default);
+    border-radius: var(--mds-modal-border-radius);
+    left: 0;
+    margin-left: 50vw;
+    max-height: calc(var(--visual-viewport-height) * 0.9);
+    max-width: min(500px, 90vw);
+    position: sticky;
+    top: calc(var(--visual-viewport-height) / 2);
+    translate: -50% -50%;
+    width: max-content;
+
+    &[data-entering] {
+        animation: modal-zoom 180ms ease-out;
+    }
+
+    &[data-exiting] {
+        animation: modal-zoom 120ms reverse ease-in;
+    }
+
+    &[data-focus-visible] {
+        outline: var(--mds-modal-border-focus);
+    }
+}
+
+.dialog {
+    display: flex;
+    flex-direction: column;
+    gap: var(--mds-modal-spacing-dialog);
+}
+
+.sm {
+    max-width: min(300px, 90vw);
+    padding: var(--mds-modal-spacing-modal-sm);
+}
+
+.md {
+    max-width: min(500px, 90vw);
+    padding: var(--mds-modal-spacing-modal-md);
+}
+
+.lg {
+    max-width: min(800px, 90vw);
+    padding: var(--mds-modal-spacing-modal-lg);
+}
+
+.xl {
+    max-width: min(1200px, 90vw);
+    padding: var(--mds-modal-spacing-modal-xl);
+}
+
+@keyframes modal-fade {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes modal-zoom {
+    from {
+        transform: scale(0.8);
+    }
+
+    to {
+        transform: scale(1);
+    }
+}

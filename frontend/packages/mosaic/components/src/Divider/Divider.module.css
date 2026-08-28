@@ -1,0 +1,13 @@
+.divider {
+    background-color: var(--mds-divider-color-background-default);
+    border-style: none;
+    border-radius: var(--mds-divider-border-radius);
+    height: var(--mds-divider-size-thickness);
+    width: 100%;
+
+    &[aria-orientation="vertical"] {
+        width: var(--mds-divider-size-thickness);
+        min-height: var(--mds-divider-size-height);
+        height: 100%;
+    }
+}

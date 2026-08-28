@@ -1,0 +1,41 @@
+{
+    "$schema": "https://www.designtokens.org/schemas/2025.10/format.json",
+    "tooltip": {
+        "border": {
+            "radius": {
+                "$value": "{border.radius.small}"
+            }
+        },
+        "color": {
+            "background": {
+                "default": {
+                    "$value": "{color.named.black}"
+                }
+            },
+            "content": {
+                "default": {
+                    "$value": "{color.named.white}"
+                }
+            }
+        },
+        "spacing": {
+            "padding": {
+                "block": {
+                    "$value": "{spacing.1}"
+                },
+                "inline": {
+                    "$value": "{spacing.2}"
+                }
+            },
+            "offset": {
+                "$value": "{spacing.2}"
+            },
+            "motion-offset": {
+                "$value": "{spacing.1}"
+            }
+        },
+        "typography": {
+            "$value": "{typography.body}"
+        }
+    }
+}

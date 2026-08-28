@@ -1,0 +1,35 @@
+{
+    "$schema": "https://www.designtokens.org/schemas/2025.10/format.json",
+    "breadcrumbs": {
+        "border": {
+            "focus": {
+                "$value": "{border.focus}"
+            },
+            "radius": {
+                "$value": "{border.radius.small}"
+            }
+        },
+        "color": {
+            "content": {
+                "default": {
+                    "$value": "{color.content.default}"
+                },
+                "hover": {
+                    "$value": "{color.content.default}"
+                },
+                "active": {
+                    "$value": "{color.content.default}"
+                },
+                "disabled": {
+                    "$value": "{color.content.disabled}"
+                }
+            }
+        },
+        "spacing": {
+            "$value": "{spacing.2}"
+        },
+        "typography": {
+            "$value": "{typography.button}"
+        }
+    }
+}

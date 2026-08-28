@@ -1,0 +1,41 @@
+/* Semantic HTML typography defaults */
+
+body {
+    font: var(--mds-typography-body);
+}
+
+p,
+li,
+dd,
+dt,
+blockquote {
+    font: var(--mds-typography-body);
+}
+
+small {
+    font: var(--mds-typography-body-small);
+}
+
+h1 {
+    font: var(--mds-typography-heading-xxlarge);
+}
+
+h2 {
+    font: var(--mds-typography-heading-xlarge);
+}
+
+h3 {
+    font: var(--mds-typography-heading-large);
+}
+
+h4 {
+    font: var(--mds-typography-heading);
+}
+
+h5 {
+    font: var(--mds-typography-heading-small);
+}
+
+h6 {
+    font: var(--mds-typography-heading-xsmall);
+}

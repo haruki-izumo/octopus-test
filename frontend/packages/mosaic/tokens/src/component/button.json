@@ -1,0 +1,637 @@
+{
+    "$schema": "https://www.designtokens.org/schemas/2025.10/format.json",
+    "button": {
+        "border": {
+            "radius": {
+                "$value": "{border.radius.small}"
+            },
+            "width": {
+                "$value": "{border.width.medium}"
+            }
+        },
+        "color": {
+            "background": {
+                "default": {
+                    "$value": "{color.pacific.700}"
+                },
+                "hover": {
+                    "$value": "{color.pacific.600}"
+                },
+                "active": {
+                    "$value": "{color.pacific.500}"
+                },
+                "disabled": {
+                    "$value": "{color.action.disabled}"
+                },
+                "primary": {
+                    "default": {
+                        "$value": "{color.action.primary.background.default}"
+                    },
+                    "hover": {
+                        "$value": "{color.action.primary.background.hover}"
+                    },
+                    "active": {
+                        "$value": "{color.action.primary.background.active}"
+                    },
+                    "outline": {
+                        "default": {
+                            "$value": "{color.background.default}"
+                        },
+                        "hover": {
+                            "$value": "{color.action.primary.background.default}"
+                        },
+                        "active": {
+                            "$value": "{color.action.primary.background.active}"
+                        }
+                    },
+                    "ghost": {
+                        "default": {
+                            "$value": "{color.background.default}"
+                        },
+                        "hover": {
+                            "$value": "{color.action.primary.background.hover}"
+                        },
+                        "active": {
+                            "$value": "{color.action.primary.background.active}"
+                        },
+                        "disabled": {
+                            "$value": "{color.background.default}"
+                        }
+                    }
+                },
+                "secondary": {
+                    "default": {
+                        "$value": "{color.action.secondary.background.default}"
+                    },
+                    "hover": {
+                        "$value": "{color.action.secondary.background.hover}"
+                    },
+                    "active": {
+                        "$value": "{color.action.secondary.background.active}"
+                    },
+                    "outline": {
+                        "default": {
+                            "$value": "{color.background.default}"
+                        },
+                        "hover": {
+                            "$value": "{color.action.secondary.background.default}"
+                        },
+                        "active": {
+                            "$value": "{color.action.secondary.background.active}"
+                        }
+                    },
+                    "ghost": {
+                        "default": {
+                            "$value": "{color.background.default}"
+                        },
+                        "hover": {
+                            "$value": "{color.action.secondary.background.hover}"
+                        },
+                        "active": {
+                            "$value": "{color.action.secondary.background.active}"
+                        },
+                        "disabled": {
+                            "$value": "{color.background.default}"
+                        }
+                    }
+                },
+                "tertiary": {
+                    "default": {
+                        "$value": "{color.action.tertiary.background.default}"
+                    },
+                    "hover": {
+                        "$value": "{color.action.tertiary.background.hover}"
+                    },
+                    "active": {
+                        "$value": "{color.action.tertiary.background.active}"
+                    },
+                    "outline": {
+                        "default": {
+                            "$value": "{color.background.default}"
+                        },
+                        "hover": {
+                            "$value": "{color.action.tertiary.background.default}"
+                        },
+                        "active": {
+                            "$value": "{color.action.tertiary.background.active}"
+                        }
+                    },
+                    "ghost": {
+                        "default": {
+                            "$value": "{color.background.default}"
+                        },
+                        "hover": {
+                            "$value": "{color.action.tertiary.background.hover}"
+                        },
+                        "active": {
+                            "$value": "{color.action.tertiary.background.active}"
+                        },
+                        "disabled": {
+                            "$value": "{color.background.default}"
+                        }
+                    }
+                },
+                "positive": {
+                    "default": {
+                        "$value": "{color.action.success.background.default}"
+                    },
+                    "hover": {
+                        "$value": "{color.action.success.background.hover}"
+                    },
+                    "active": {
+                        "$value": "{color.action.success.background.active}"
+                    },
+                    "outline": {
+                        "default": {
+                            "$value": "{color.background.default}"
+                        },
+                        "hover": {
+                            "$value": "{color.action.success.background.hover}"
+                        },
+                        "active": {
+                            "$value": "{color.action.success.background.active}"
+                        }
+                    },
+                    "ghost": {
+                        "default": {
+                            "$value": "{color.background.default}"
+                        },
+                        "hover": {
+                            "$value": "{color.action.success.background.hover}"
+                        },
+                        "active": {
+                            "$value": "{color.action.success.background.active}"
+                        },
+                        "disabled": {
+                            "$value": "{color.background.default}"
+                        }
+                    }
+                },
+                "danger": {
+                    "default": {
+                        "$value": "{color.action.danger.background.default}"
+                    },
+                    "hover": {
+                        "$value": "{color.action.danger.background.hover}"
+                    },
+                    "active": {
+                        "$value": "{color.action.danger.background.active}"
+                    },
+                    "outline": {
+                        "default": {
+                            "$value": "{color.background.default}"
+                        },
+                        "hover": {
+                            "$value": "{color.action.danger.background.hover}"
+                        },
+                        "active": {
+                            "$value": "{color.action.danger.background.active}"
+                        }
+                    },
+                    "ghost": {
+                        "default": {
+                            "$value": "{color.background.default}"
+                        },
+                        "hover": {
+                            "$value": "{color.action.danger.background.hover}"
+                        },
+                        "active": {
+                            "$value": "{color.action.danger.background.active}"
+                        },
+                        "disabled": {
+                            "$value": "{color.background.default}"
+                        }
+                    }
+                }
+            },
+            "border": {
+                "default": {
+                    "$value": "{color.pacific.700}"
+                },
+                "hover": {
+                    "$value": "{color.pacific.600}"
+                },
+                "active": {
+                    "$value": "{color.pacific.500}"
+                },
+                "disabled": {
+                    "$value": "{color.action.disabled}"
+                },
+                "primary": {
+                    "default": {
+                        "$value": "{color.action.primary.border.default}"
+                    },
+                    "hover": {
+                        "$value": "{color.action.primary.border.hover}"
+                    },
+                    "active": {
+                        "$value": "{color.action.primary.border.active}"
+                    },
+                    "outline": {
+                        "default": {
+                            "$value": "{color.named.siphon}"
+                        },
+                        "hover": {
+                            "$value": "{color.action.primary.border.default}"
+                        },
+                        "active": {
+                            "$value": "{color.action.primary.border.active}"
+                        }
+                    },
+                    "ghost": {
+                        "default": {
+                            "$value": "{color.named.white}"
+                        },
+                        "hover": {
+                            "$value": "{color.action.primary.border.hover}"
+                        },
+                        "active": {
+                            "$value": "{color.action.primary.border.active}"
+                        },
+                        "disabled": {
+                            "$value": "{color.named.white}"
+                        }
+                    }
+                },
+                "secondary": {
+                    "default": {
+                        "$value": "{color.action.secondary.border.default}"
+                    },
+                    "hover": {
+                        "$value": "{color.action.secondary.border.hover}"
+                    },
+                    "active": {
+                        "$value": "{color.action.secondary.border.active}"
+                    },
+                    "outline": {
+                        "default": {
+                            "$value": "{color.content.default}"
+                        },
+                        "hover": {
+                            "$value": "{color.action.secondary.border.default}"
+                        },
+                        "active": {
+                            "$value": "{color.action.secondary.border.active}"
+                        }
+                    },
+                    "ghost": {
+                        "default": {
+                            "$value": "{color.background.default}"
+                        },
+                        "hover": {
+                            "$value": "{color.action.secondary.background.hover}"
+                        },
+                        "active": {
+                            "$value": "{color.action.secondary.background.active}"
+                        },
+                        "disabled": {
+                            "$value": "{color.background.default}"
+                        }
+                    }
+                },
+                "tertiary": {
+                    "default": {
+                        "$value": "{color.action.tertiary.border.default}"
+                    },
+                    "hover": {
+                        "$value": "{color.action.tertiary.border.hover}"
+                    },
+                    "active": {
+                        "$value": "{color.action.tertiary.border.active}"
+                    },
+                    "outline": {
+                        "default": {
+                            "$value": "{color.content.default}"
+                        },
+                        "hover": {
+                            "$value": "{color.action.tertiary.border.default}"
+                        },
+                        "active": {
+                            "$value": "{color.action.tertiary.border.active}"
+                        }
+                    },
+                    "ghost": {
+                        "default": {
+                            "$value": "{color.background.default}"
+                        },
+                        "hover": {
+                            "$value": "{color.action.tertiary.background.hover}"
+                        },
+                        "active": {
+                            "$value": "{color.action.tertiary.background.active}"
+                        },
+                        "disabled": {
+                            "$value": "{color.background.default}"
+                        }
+                    }
+                },
+                "positive": {
+                    "default": {
+                        "$value": "{color.action.success.border.default}"
+                    },
+                    "hover": {
+                        "$value": "{color.action.success.border.hover}"
+                    },
+                    "active": {
+                        "$value": "{color.action.success.border.active}"
+                    },
+                    "outline": {
+                        "default": {
+                            "$value": "{color.action.success.border.default}"
+                        },
+                        "hover": {
+                            "$value": "{color.action.success.border.hover}"
+                        },
+                        "active": {
+                            "$value": "{color.action.success.border.active}"
+                        }
+                    },
+                    "ghost": {
+                        "default": {
+                            "$value": "{color.background.default}"
+                        },
+                        "hover": {
+                            "$value": "{color.action.success.border.hover}"
+                        },
+                        "active": {
+                            "$value": "{color.action.success.border.active}"
+                        },
+                        "disabled": {
+                            "$value": "{color.background.default}"
+                        }
+                    }
+                },
+                "danger": {
+                    "default": {
+                        "$value": "{color.action.danger.border.default}"
+                    },
+                    "hover": {
+                        "$value": "{color.action.danger.border.hover}"
+                    },
+                    "active": {
+                        "$value": "{color.action.danger.border.active}"
+                    },
+                    "outline": {
+                        "default": {
+                            "$value": "{color.action.danger.border.default}"
+                        },
+                        "hover": {
+                            "$value": "{color.action.danger.border.hover}"
+                        },
+                        "active": {
+                            "$value": "{color.action.danger.border.active}"
+                        }
+                    },
+                    "ghost": {
+                        "default": {
+                            "$value": "{color.background.default}"
+                        },
+                        "hover": {
+                            "$value": "{color.action.danger.background.hover}"
+                        },
+                        "active": {
+                            "$value": "{color.action.danger.background.active}"
+                        },
+                        "disabled": {
+                            "$value": "{color.background.default}"
+                        }
+                    }
+                }
+            },
+            "content": {
+                "default": {
+                    "$value": "{color.content.default}"
+                },
+                "hover": {
+                    "$value": "{color.content.default}"
+                },
+                "active": {
+                    "$value": "{color.content.default}"
+                },
+                "disabled": {
+                    "$value": "{color.content.disabled}"
+                },
+                "primary": {
+                    "default": {
+                        "$value": "{color.action.primary.content.default}"
+                    },
+                    "hover": {
+                        "$value": "{color.action.primary.content.hover}"
+                    },
+                    "active": {
+                        "$value": "{color.action.primary.content.active}"
+                    },
+                    "outline": {
+                        "default": {
+                            "$value": "{color.content.default}"
+                        },
+                        "hover": {
+                            "$value": "{color.action.primary.content.hover}"
+                        },
+                        "active": {
+                            "$value": "{color.action.primary.content.active}"
+                        }
+                    },
+                    "ghost": {
+                        "default": {
+                            "$value": "{color.content.default}"
+                        },
+                        "hover": {
+                            "$value": "{color.action.primary.content.hover}"
+                        },
+                        "active": {
+                            "$value": "{color.action.primary.content.active}"
+                        },
+                        "disabled": {
+                            "$value": "{button.color.content.disabled}"
+                        }
+                    }
+                },
+                "secondary": {
+                    "default": {
+                        "$value": "{color.action.secondary.content.default}"
+                    },
+                    "hover": {
+                        "$value": "{color.action.secondary.content.hover}"
+                    },
+                    "active": {
+                        "$value": "{color.action.secondary.content.active}"
+                    },
+                    "outline": {
+                        "default": {
+                            "$value": "{color.content.default}"
+                        },
+                        "hover": {
+                            "$value": "{color.action.secondary.content.hover}"
+                        },
+                        "active": {
+                            "$value": "{color.action.secondary.content.active}"
+                        }
+                    },
+                    "ghost": {
+                        "default": {
+                            "$value": "{color.content.default}"
+                        },
+                        "hover": {
+                            "$value": "{color.action.secondary.content.hover}"
+                        },
+                        "active": {
+                            "$value": "{color.action.secondary.content.active}"
+                        },
+                        "disabled": {
+                            "$value": "{color.background.default}"
+                        }
+                    }
+                },
+                "tertiary": {
+                    "default": {
+                        "$value": "{color.action.tertiary.content.default}"
+                    },
+                    "hover": {
+                        "$value": "{color.action.tertiary.content.hover}"
+                    },
+                    "active": {
+                        "$value": "{color.action.tertiary.content.active}"
+                    },
+                    "outline": {
+                        "default": {
+                            "$value": "{color.content.default}"
+                        },
+                        "hover": {
+                            "$value": "{color.action.tertiary.content.hover}"
+                        },
+                        "active": {
+                            "$value": "{color.action.tertiary.content.active}"
+                        }
+                    },
+                    "ghost": {
+                        "default": {
+                            "$value": "{color.content.default}"
+                        },
+                        "hover": {
+                            "$value": "{color.action.tertiary.content.hover}"
+                        },
+                        "active": {
+                            "$value": "{color.action.tertiary.content.active}"
+                        },
+                        "disabled": {
+                            "$value": "{color.background.default}"
+                        }
+                    }
+                },
+                "positive": {
+                    "default": {
+                        "$value": "{color.action.success.content.default}"
+                    },
+                    "hover": {
+                        "$value": "{color.action.success.content.hover}"
+                    },
+                    "active": {
+                        "$value": "{color.action.success.content.active}"
+                    },
+                    "outline": {
+                        "default": {
+                            "$value": "{color.green.500}"
+                        },
+                        "hover": {
+                            "$value": "{color.action.success.content.hover}"
+                        },
+                        "active": {
+                            "$value": "{color.action.success.content.active}"
+                        }
+                    },
+                    "ghost": {
+                        "default": {
+                            "$value": "{color.content.default}"
+                        },
+                        "hover": {
+                            "$value": "{color.action.success.content.default}"
+                        },
+                        "active": {
+                            "$value": "{color.action.success.content.active}"
+                        },
+                        "disabled": {
+                            "$value": "{button.color.content.disabled}"
+                        }
+                    }
+                },
+                "danger": {
+                    "default": {
+                        "$value": "{color.action.danger.content.default}"
+                    },
+                    "hover": {
+                        "$value": "{color.action.danger.content.hover}"
+                    },
+                    "active": {
+                        "$value": "{color.action.danger.content.active}"
+                    },
+                    "outline": {
+                        "default": {
+                            "$value": "{color.red.500}"
+                        },
+                        "hover": {
+                            "$value": "{color.action.danger.content.hover}"
+                        },
+                        "active": {
+                            "$value": "{color.action.danger.content.active}"
+                        }
+                    },
+                    "ghost": {
+                        "default": {
+                            "$value": "{color.content.default}"
+                        },
+                        "hover": {
+                            "$value": "{color.action.danger.content.default}"
+                        },
+                        "active": {
+                            "$value": "{color.action.danger.content.active}"
+                        },
+                        "disabled": {
+                            "$value": "{button.color.content.disabled}"
+                        }
+                    }
+                }
+            }
+        },
+        "spacing": {
+            "gap": {
+                "$value": "{spacing.0-5}"
+            },
+            "padding": {
+                "block": {
+                    "small": {
+                        "$value": "{spacing.0-5}"
+                    },
+                    "medium": {
+                        "$value": "{spacing.1}"
+                    },
+                    "large": {
+                        "$value": "{spacing.4}"
+                    }
+                },
+                "inline": {
+                    "small": {
+                        "$value": "{spacing.1}"
+                    },
+                    "medium": {
+                        "$value": "{spacing.4}"
+                    },
+                    "large": {
+                        "$value": "{spacing.8}"
+                    }
+                }
+            }
+        },
+        "typography": {
+            "small": {
+                "$value": "{typography.button-small}"
+            },
+            "medium": {
+                "$value": "{typography.button}"
+            },
+            "large": {
+                "$value": "{typography.button-large}"
+            }
+        }
+    }
+}

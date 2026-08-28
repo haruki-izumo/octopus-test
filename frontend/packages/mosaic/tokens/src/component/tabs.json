@@ -1,0 +1,62 @@
+{
+    "$schema": "https://www.designtokens.org/schemas/2025.10/format.json",
+    "tabs": {
+        "border": {
+            "radius": {
+                "default": {
+                    "$value": "{border.radius.small}"
+                },
+                "active": {
+                    "$value": "{border.radius.small}"
+                }
+            },
+            "width": {
+                "default": {
+                    "$value": "{border.width.small}"
+                },
+                "active": {
+                    "$value": "{border.width.large}"
+                }
+            }
+        },
+        "color": {
+            "border": {
+                "default": {
+                    "$value": "{color.border.default}"
+                },
+                "active": {
+                    "$value": "{color.content.accent}"
+                },
+                "disabled": {
+                    "$value": "{color.content.disabled}"
+                }
+            },
+            "content": {
+                "default": {
+                    "$value": "{color.content.default}"
+                },
+                "disabled": {
+                    "$value": "{color.content.disabled}"
+                }
+            }
+        },
+        "spacing": {
+            "gap": {
+                "$value": "{spacing.4}"
+            },
+            "padding": {
+                "block": {
+                    "$value": "{spacing.2}"
+                }
+            }
+        },
+        "typography": {
+            "default": {
+                "$value": "{typography.heading-small}"
+            },
+            "small": {
+                "$value": "{typography.heading-xxsmall}"
+            }
+        }
+    }
+}

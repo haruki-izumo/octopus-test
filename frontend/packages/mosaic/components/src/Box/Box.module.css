@@ -1,0 +1,15 @@
+.pt {
+    padding-top: var(--box-pt);
+}
+
+.pr {
+    padding-right: var(--box-pr);
+}
+
+.pb {
+    padding-bottom: var(--box-pb);
+}
+
+.pl {
+    padding-left: var(--box-pl);
+}

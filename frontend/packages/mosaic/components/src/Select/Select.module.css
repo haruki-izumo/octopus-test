@@ -1,0 +1,148 @@
+.select {
+    display: inline-flex;
+    flex-direction: column;
+    gap: var(--mds-select-spacing-block);
+    width: 100%;
+}
+
+.trigger {
+    align-items: center;
+    appearance: none;
+    background-color: var(--mds-select-color-background-default);
+    border: var(--mds-select-border-width) solid var(--mds-select-color-border-default);
+    border-radius: var(--mds-select-border-radius);
+    color: var(--mds-select-color-content-default);
+    cursor: pointer;
+    display: inline-flex;
+    font: var(--mds-select-typography);
+    gap: var(--mds-select-spacing-gap);
+    justify-content: space-between;
+    margin: 0;
+    min-height: var(--mds-select-spacing-input-height);
+    padding: var(--mds-select-spacing-input-padding-y) var(--mds-select-spacing-input-padding-x);
+    text-align: left;
+    -webkit-tap-highlight-color: transparent;
+}
+
+.select[data-open] .trigger,
+.select[data-focused] .trigger {
+    outline: 2px solid var(--mds-select-color-border-active);
+    outline-offset: -2px;
+}
+
+.select[data-disabled] .trigger {
+    color: var(--mds-select-color-content-disabled);
+    cursor: not-allowed;
+    background-color: var(--mds-select-color-background-disabled);
+}
+
+.select[data-invalid] .trigger {
+    outline: 2px solid var(--mds-select-color-border-danger);
+    outline-offset: -2px;
+}
+
+.select[data-invalid] .trigger,
+.select[data-invalid] .value {
+    color: var(--mds-select-color-content-danger);
+}
+
+.value {
+    flex: 1;
+    min-width: 0;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+
+    &[data-placeholder] {
+        color: var(--mds-select-color-content-placeholder);
+    }
+}
+
+.icon {
+    flex-shrink: 0;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+    .icon {
+        transition: transform 0.2s ease-out;
+    }
+
+    .select[data-open] .icon {
+        transform: rotate(180deg);
+    }
+}
+
+.popover {
+    background-color: var(--mds-select-color-background-default);
+    outline: 2px solid var(--mds-select-color-border-active);
+    outline-offset: -2px;
+    border: var(--mds-select-border-width) solid var(--mds-select-color-border-active);
+    border-radius: var(--mds-select-border-radius);
+    min-width: var(--trigger-width);
+    overflow: hidden;
+}
+
+.popoverInvalid {
+    outline: 2px solid var(--mds-select-color-border-danger);
+    border-color: var(--mds-select-color-border-danger);
+}
+
+.listBox {
+    display: flex;
+    flex-direction: column;
+    max-height: var(--mds-select-spacing-list-max-height);
+    outline: none;
+    overflow: auto;
+    padding: 0;
+}
+
+.item {
+    background-color: var(--mds-select-color-items-background-default);
+    border: none;
+    color: var(--mds-select-color-items-content-default);
+    cursor: pointer;
+    font: var(--mds-select-typography);
+    list-style: none;
+    outline: none;
+    padding: var(--mds-select-spacing-input-padding-y) var(--mds-select-spacing-input-padding-x);
+
+    &[data-selected] {
+        background-color: var(--mds-select-color-items-background-active);
+        color: var(--mds-select-color-items-content-active);
+    }
+
+    &[data-hovered],
+    &[data-focused] {
+        background-color: var(--mds-select-color-items-background-hover);
+        color: var(--mds-select-color-items-content-hover);
+        outline: none;
+    }
+
+    &[data-disabled] {
+        cursor: not-allowed;
+        color: var(--mds-select-color-items-content-disabled);
+        background-color: var(--mds-select-color-items-background-disabled);
+    }
+}
+
+.popoverInvalid .item {
+    background-color: var(--mds-select-color-items-background-danger-default);
+    color: var(--mds-select-color-items-content-danger-default);
+
+    &[data-selected] {
+        background-color: var(--mds-select-color-items-background-danger-active);
+        color: var(--mds-select-color-items-content-danger-active);
+    }
+
+    &[data-hovered],
+    &[data-focused] {
+        background-color: var(--mds-select-color-items-background-danger-hover);
+        color: var(--mds-select-color-items-content-danger-hover);
+    }
+
+    &[data-disabled] {
+        cursor: not-allowed;
+        color: var(--mds-select-color-items-content-disabled);
+        background-color: var(--mds-select-color-items-background-disabled);
+    }
+}

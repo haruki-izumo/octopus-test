@@ -1,0 +1,76 @@
+{
+    "$schema": "https://www.designtokens.org/schemas/2025.10/format.json",
+    "toggle-button": {
+        "border": {
+            "focus": {
+                "$value": "{border.focus}"
+            },
+            "radius": {
+                "default": {
+                    "$value": "{border.radius.small}"
+                },
+                "icon": {
+                    "$value": "{border.radius.circle}"
+                }
+            },
+            "width": {
+                "$value": "{border.width.small}"
+            }
+        },
+        "color": {
+            "background": {
+                "default": {
+                    "$value": "{color.background.default}"
+                },
+                "hover": {
+                    "$value": "{color.background.shade-1}"
+                },
+                "active": {
+                    "$value": "{color.background.shade-2}"
+                }
+            },
+            "border": {
+                "$value": "{color.border.default}"
+            },
+            "content": {
+                "default": {
+                    "$value": "{color.content.default}"
+                },
+                "disabled": {
+                    "$value": "{color.content.disabled}"
+                }
+            }
+        },
+        "spacing": {
+            "gap": {
+                "$value": "{spacing.0-5}"
+            },
+            "icon": {
+                "size": {
+                    "$value": "{spacing.8}"
+                }
+            },
+            "padding": {
+                "block": {
+                    "default": {
+                        "$value": "{spacing.1}"
+                    },
+                    "icon": {
+                        "$value": "{spacing.1}"
+                    }
+                },
+                "inline": {
+                    "default": {
+                        "$value": "{spacing.2}"
+                    },
+                    "icon": {
+                        "$value": "{spacing.1}"
+                    }
+                }
+            }
+        },
+        "typography": {
+            "$value": "{typography.button}"
+        }
+    }
+}
