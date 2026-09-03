@@ -1,7 +1,8 @@
 # How we build things
 
-These are the rules we follow in the backend. Each one exists because
-something went wrong without it. Paths are relative to `backend/`.
+These are the rules we follow. Each one exists because something went
+wrong without it. Rules 1 to 11 are for the backend, with paths relative
+to `backend/`. Rules 12 to 14 are for the front-end.
 
 ## 1. Code is grouped by business area
 Each area has its own folder in `src/features/`, containing:
@@ -97,3 +98,34 @@ the happy path.
 ## 11. Keep it simple
 Add abstractions, such as a pattern for handling several variations of
 something, once there are three real cases. Not before.
+
+---
+
+The rules below are for the front-end, with paths relative to
+`frontend/apps/customer-portal/`. The backend rules about money, dates and
+idempotency apply here too; these helpers are how we follow them.
+
+## 12. Call the backend with `src/lib/api-client.ts`
+Don't call `fetch` directly. For anything that changes data, get a key
+with `createActionKey()` once per customer action, such as when a form is
+opened, and pass it to `postJson`. The client retries timeouts and server
+errors with the same key, and so should the customer pressing the button
+again.
+
+**Why:** a retry with a new key is a new request (rule 6), so a change
+that timed out but went through would be made twice.
+
+## 13. The backend owns prices
+Show amounts with `formatPounds` from `src/lib/money.ts`, passing the
+string the API returned. Never do arithmetic on money or work out prices
+in the front-end; if a page needs a figure, the API should provide it.
+
+**Why:** the same as rule 2. A price worked out in the browser can differ
+by a penny from what the customer is charged.
+
+## 14. Show dates with `formatUkDate`
+Show dates from the API, such as `"2026-10-01"`, with `formatUkDate` from
+`src/lib/dates.ts`. Don't use `new Date(...)` and `toLocaleDateString`.
+
+**Why:** `new Date("2026-10-01")` is midnight UTC, so anywhere west of UTC
+it shows the day before.

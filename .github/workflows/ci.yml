@@ -34,6 +34,27 @@ jobs:
       - name: Run migrations
         run: just migrate
       - name: Lint, format check and type check
-        run: just check
+        run: just check-backend
       - name: Test
-        run: just test
+        run: just test-backend
+
+  frontend:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+      - uses: pnpm/action-setup@v4
+        with:
+          package_json_file: frontend/package.json
+      - uses: actions/setup-node@v5
+        with:
+          node-version-file: frontend/package.json
+          cache: pnpm
+          cache-dependency-path: frontend/pnpm-lock.yaml
+      - uses: extractions/setup-just@v3
+      - name: Install dependencies
+        working-directory: frontend
+        run: pnpm install --frozen-lockfile
+      - name: Lint, format check and type check
+        run: just check-frontend
+      - name: Test
+        run: just test-frontend
