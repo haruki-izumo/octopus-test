@@ -25,6 +25,7 @@ from src.events.catalogue import ContractCreated
 from src.models import Contract
 
 ACTOR = "seed-script"
+CUSTOMER_PORTAL_URL = "http://localhost:3000"
 
 
 @dataclass(frozen=True, slots=True)
@@ -41,29 +42,38 @@ class ExampleContract:
 
 
 EXAMPLES = [
-    ExampleContract("Tesla", "Model 3", "LC25 KTA", Decimal("42000"), 36, 10_000, 2, 1),
-    ExampleContract("Volkswagen", "ID.3", "LB25 XWD", Decimal("34000"), 36, 15_000, 9, 5),
-    ExampleContract("Renault", "Megane E-Tech", "LD26 RMV", Decimal("35000"), 24, 12_000, 1, 25),
-    ExampleContract("MG", "MG4", "LF25 MGH", Decimal("27000"), 24, 30_000, 6, 12),
-    ExampleContract("Kia", "EV6", "LA24 KEV", Decimal("45500"), 48, 12_000, 20, 15),
-    ExampleContract("Hyundai", "Ioniq 5", "LG24 HYN", Decimal("41000"), 48, 5_000, 30, 20),
-    ExampleContract("Audi", "Q4 e-tron", "LH23 AQE", Decimal("50000"), 48, 25_000, 40, 8),
-    ExampleContract("BMW", "i4", "LJ24 BMW", Decimal("52000"), 24, 8_000, 22, 28),
-    ExampleContract("Skoda", "Enyaq", "LK23 SKE", Decimal("39500"), 36, 10_000, 34, 1),
+    ExampleContract("Tesla", "Model 3", "LC25 KTA", Decimal("39990.00"), 36, 10_000, 2, 1),
+    ExampleContract("Volkswagen", "ID.3", "LB25 XWD", Decimal("31499.99"), 36, 15_000, 9, 5),
+    ExampleContract("Renault", "Megane E-Tech", "LD26 RMV", Decimal("35295.50"), 24, 12_000, 1, 25),
+    ExampleContract("MG", "MG4", "LF25 MGH", Decimal("26995.00"), 24, 30_000, 6, 12),
+    ExampleContract("Kia", "EV6", "LA24 KEV", Decimal("45275.99"), 48, 12_000, 20, 15),
+    ExampleContract("Hyundai", "Ioniq 5", "LG24 HYN", Decimal("41037.49"), 48, 5_000, 30, 20),
+    ExampleContract("Audi", "Q4 e-tron", "LH23 AQE", Decimal("49999.99"), 48, 25_000, 40, 8),
+    ExampleContract("BMW", "i4", "LJ24 BMW", Decimal("51780.00"), 24, 8_000, 22, 28),
+    ExampleContract("Skoda", "Enyaq", "LK23 SKE", Decimal("39485.75"), 36, 10_000, 34, 1),
     ExampleContract(
-        "Polestar", "2", "LM24 PLS", Decimal("48000"), 36, 20_000, 14, 10, ContractStatus.TERMINATED
+        "Polestar",
+        "2",
+        "LM24 PLS",
+        Decimal("47950.00"),
+        36,
+        20_000,
+        14,
+        10,
+        ContractStatus.TERMINATED,
     ),
 ]
 
 
-async def seed(database: Database, rate_card: RateCard, today: BusinessDate) -> int:
-    """Adds the examples, unless there are contracts already. Returns how many were added."""
+async def seed(database: Database, rate_card: RateCard, today: BusinessDate) -> list[Contract]:
+    """Adds the examples, unless there are contracts already. Returns the contracts added."""
     contracts = ContractDatabaseClient()
     audit = AuditWriter()
     outbox = OutboxWriter()
+    added: list[Contract] = []
     async with database.sessions.begin() as session:
         if await session.scalar(select(Contract.id).limit(1)) is not None:
-            return 0
+            return added
         for example in EXAMPLES:
             vehicle_price = MoneyInt.from_pounds(example.price)
             payment = calculate_monthly_payment(
@@ -100,7 +110,8 @@ async def seed(database: Database, rate_card: RateCard, today: BusinessDate) -> 
                     created_at=contract.created_at,
                 ),
             )
-    return len(EXAMPLES)
+            added.append(contract)
+    return added
 
 
 async def main() -> None:
@@ -111,7 +122,12 @@ async def main() -> None:
     finally:
         await database.dispose()
     if added:
-        print(f"Added {added} example contracts")
+        print(f"Added {len(added)} example contracts. View them in the customer portal:")
+        for contract in added:
+            print(
+                f"  {contract.vehicle_make} {contract.vehicle_model} ({contract.status}): "
+                f"{CUSTOMER_PORTAL_URL}/contracts/{contract.uuid}"
+            )
     else:
         print("There are contracts already, so no examples were added")
 
