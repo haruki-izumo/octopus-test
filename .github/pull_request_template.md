@@ -8,6 +8,6 @@
 
 ## Checklist
 - [ ] Tests added
-- [ ] Follows docs/conventions.md
+- [ ] Follows the conventions in backend/docs and frontend/docs
 - [ ] No breaking API changes
 - [ ] Migration tested locally

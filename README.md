@@ -13,14 +13,15 @@ during the lease, and the events other services rely on.
 ## Who uses this service
 The **customer portal** and the **agent tool** both read contracts using
 `GET /contracts/{uuid}`, so its response must not change in ways that
-break them (see rule 8 in `docs/conventions.md`).
+break them (see rule 8 in `backend/docs/conventions.md`).
 
 The customer portal is in `frontend/apps/customer-portal`. It's a Next.js
 app that lets customers see their contract and make changes to it, such as
 their payment date.
 
 ## Before you make changes
-Read `docs/conventions.md`: how we build things here, and why.
+Read `backend/docs/conventions.md` and `frontend/docs/conventions.md`: how
+we build things here, and why.
 
 ## Running locally
 You'll need [Docker](https://docs.docker.com/get-docker/),
