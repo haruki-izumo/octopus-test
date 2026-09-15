@@ -1,0 +1,52 @@
+.header {
+    background-color: var(--mds-color-named-hemocyanin);
+    color: var(--mds-color-content-inverted);
+}
+
+.headerInner,
+.main {
+    margin-inline: auto;
+    max-width: 72rem;
+    padding-inline: var(--mds-spacing-4);
+}
+
+.headerInner {
+    align-items: center;
+    display: flex;
+    gap: var(--mds-spacing-2);
+    min-height: 3.5rem;
+}
+
+.brandIcon {
+    color: var(--mds-color-icon-accent);
+}
+
+.brand {
+    font: var(--mds-typography-heading-xxsmall);
+}
+
+.main {
+    padding-block: var(--mds-spacing-6) var(--mds-spacing-10);
+}
+
+@media (min-width: 48rem) {
+    .headerInner,
+    .main {
+        padding-inline: var(--mds-spacing-6);
+    }
+
+    .headerInner {
+        min-height: 4rem;
+    }
+
+    .main {
+        padding-block: var(--mds-spacing-8) var(--mds-spacing-16);
+    }
+}
+
+@media (min-width: 64rem) {
+    .headerInner,
+    .main {
+        padding-inline: var(--mds-spacing-8);
+    }
+}

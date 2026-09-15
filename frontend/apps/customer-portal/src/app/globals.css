@@ -1,0 +1,18 @@
+body {
+    background-color: var(--mds-color-background-default);
+    color: var(--mds-color-content-default);
+}
+
+h1 {
+    font: var(--mds-typography-heading-small);
+}
+
+h2 {
+    font: var(--mds-typography-heading-xsmall);
+}
+
+@media (min-width: 48rem) {
+    h1 {
+        font: var(--mds-typography-heading);
+    }
+}

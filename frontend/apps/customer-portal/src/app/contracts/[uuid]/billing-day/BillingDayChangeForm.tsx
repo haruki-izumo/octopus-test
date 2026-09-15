@@ -101,7 +101,7 @@ export function BillingDayChangeForm({ contract }: { contract: Contract }) {
                     </SelectItem>
                 ))}
             </Select>
-            <Stack direction="horizontal" gap={2}>
+            <Stack direction="horizontal" gap={4} align="center" wrap="wrap">
                 <Button isDisabled={billingDay === null} isPending={isSubmitting} onPress={submit}>
                     Change my payment date
                 </Button>

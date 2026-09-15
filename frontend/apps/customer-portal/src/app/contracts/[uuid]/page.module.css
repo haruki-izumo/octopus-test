@@ -1,0 +1,146 @@
+.page {
+    display: grid;
+    gap: var(--mds-spacing-6);
+}
+
+.header {
+    display: grid;
+    gap: var(--mds-spacing-4);
+}
+
+.registration {
+    /* UK rear number plate yellow */
+    background-color: #f7d117;
+    border: var(--mds-border-width-small) solid var(--mds-color-named-black);
+    border-radius: var(--mds-border-radius-small);
+    color: var(--mds-color-named-black);
+    font: var(--mds-typography-heading-xxsmall);
+    letter-spacing: 0.08em;
+    padding: var(--mds-spacing-1) var(--mds-spacing-2);
+    white-space: nowrap;
+}
+
+.payment {
+    align-self: start;
+    background-color: var(--mds-color-background-shade-1);
+    border-radius: var(--mds-border-radius-large);
+    color: var(--mds-color-content-default);
+    display: grid;
+    gap: var(--mds-spacing-5);
+    grid-area: payment;
+    padding: var(--mds-spacing-5);
+}
+
+.paymentSummary {
+    display: grid;
+    gap: var(--mds-spacing-1);
+}
+
+.label {
+    color: var(--mds-color-content-muted);
+    font: var(--mds-typography-label);
+}
+
+.amount {
+    font: var(--mds-typography-heading-large);
+}
+
+.muted {
+    color: var(--mds-color-content-muted);
+    font: var(--mds-typography-body-small);
+}
+
+.sections {
+    display: grid;
+    gap: var(--mds-spacing-10);
+    grid-template-areas:
+        "payment"
+        "details";
+}
+
+.section {
+    display: grid;
+    align-content: start;
+    gap: var(--mds-spacing-3);
+    grid-area: details;
+}
+
+.details {
+    display: grid;
+}
+
+.detail {
+    border-bottom: var(--mds-border-width-small) solid var(--mds-color-border-subtle);
+    display: flex;
+    gap: var(--mds-spacing-4);
+    justify-content: space-between;
+    padding-block: var(--mds-spacing-3);
+
+    dt {
+        font-weight: var(--mds-typography-font-weight-bold);
+    }
+
+    dd {
+        text-align: end;
+    }
+}
+
+.change {
+    align-items: center;
+    border-top: var(--mds-border-width-small) solid var(--mds-color-border-default);
+    display: flex;
+    gap: var(--mds-spacing-3);
+    padding-top: var(--mds-spacing-4);
+    position: relative;
+
+    /* Makes the whole row open the link. */
+    a::after {
+        content: "";
+        inset: 0;
+        position: absolute;
+    }
+}
+
+.changeText {
+    display: grid;
+    flex: 1;
+    font-weight: var(--mds-typography-font-weight-bold);
+    gap: var(--mds-spacing-0-5);
+}
+
+.chevron {
+    color: var(--mds-color-icon-muted);
+    flex-shrink: 0;
+    transition: transform 150ms ease-out;
+}
+
+.change:hover .chevron {
+    transform: translateX(var(--mds-spacing-1));
+}
+
+@media (min-width: 48rem) {
+    .page {
+        gap: var(--mds-spacing-8);
+    }
+
+    .payment {
+        padding: var(--mds-spacing-6);
+    }
+
+    .sections {
+        column-gap: var(--mds-spacing-10);
+        grid-template-areas: "details payment";
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media (min-width: 64rem) {
+    .amount {
+        font: var(--mds-typography-heading-xlarge);
+    }
+
+    .sections {
+        column-gap: var(--mds-spacing-16);
+        grid-template-columns: 3fr 2fr;
+    }
+}

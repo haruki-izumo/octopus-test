@@ -1,4 +1,4 @@
-import { render, screen } from '@testing-library/react'
+import { render, screen, within } from '@testing-library/react'
 import { afterEach, beforeEach, describe, expect, it, type Mock, vi } from 'vitest'
 
 import type { Contract } from '@/lib/contracts'
@@ -47,14 +47,22 @@ describe('ContractPage', () => {
 
         expect(screen.getByRole('heading', { name: 'Kia EV6' })).toBeInTheDocument()
         expect(screen.getByText('£765.56')).toBeInTheDocument()
-        expect(screen.getByText('The 1st of each month')).toBeInTheDocument()
+        expect(screen.getByText('Taken on the 1st of each month')).toBeInTheDocument()
         expect(screen.getByText('10,000 miles')).toBeInTheDocument()
-        expect(screen.getByText('36 months, 23 remaining')).toBeInTheDocument()
+        expect(screen.getByText('36 months (23 remaining)')).toBeInTheDocument()
         expect(screen.getByText('1 September 2025')).toBeInTheDocument()
         expect(screen.getByText('31 August 2028')).toBeInTheDocument()
         expect(fetchMock).toHaveBeenCalledWith(`/api/contracts/${CONTRACT.uuid}`, {
             cache: 'no-store',
         })
+    })
+
+    it('links back home from the breadcrumbs', async () => {
+        await renderPage()
+
+        const breadcrumbs = screen.getByRole('list', { name: 'Breadcrumbs' })
+        expect(within(breadcrumbs).getByRole('link', { name: 'Home' })).toHaveAttribute('href', '/')
+        expect(within(breadcrumbs).getByText('Kia EV6')).toHaveAttribute('aria-current', 'page')
     })
 
     it('links to changing the payment date', async () => {
