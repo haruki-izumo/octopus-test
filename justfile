@@ -18,9 +18,9 @@ install:
 up:
     {{ compose }} up --build --detach --wait
 
-# Start everything, with the customer portal on http://localhost:3000 (Ctrl+C stops the portal)
+# Start everything, with the customer portal on http://localhost:3000 and the service tool on http://localhost:3001 (Ctrl+C stops them)
 dev: up migrate
-    {{ pnpm }} turbo run dev --filter=customer-portal --ui=stream
+    {{ pnpm }} turbo run dev --filter=customer-portal --filter=service-tool --ui=stream
 
 # Stop the backend
 down:
@@ -49,14 +49,17 @@ test-backend *arguments:
 test-frontend:
     {{ pnpm }} test
 
+# Lint everything
 lint:
     uv run ruff check
     {{ pnpm }} lint
 
+# Format everything
 format:
     uv run ruff format
     {{ pnpm }} format
 
+# Type check everything
 typecheck:
     uv run ty check
     {{ pnpm }} typecheck

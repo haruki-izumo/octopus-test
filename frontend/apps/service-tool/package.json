@@ -13,6 +13,9 @@
     },
     "dependencies": {
         "@hookform/resolvers": "catalog:",
+        "@octoev/mosaic": "workspace:*",
+        "@octoev/mosaic-icons": "workspace:*",
+        "@octoev/mosaic-tokens": "workspace:*",
         "next": "catalog:",
         "react": "catalog:",
         "react-dom": "catalog:",

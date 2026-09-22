@@ -150,6 +150,15 @@ importers:
       '@hookform/resolvers':
         specifier: 'catalog:'
         version: 5.9.1(react-hook-form@7.88.0(react@19.3.0))(yup@1.7.1)
+      '@octoev/mosaic':
+        specifier: workspace:*
+        version: link:../../packages/mosaic/components
+      '@octoev/mosaic-icons':
+        specifier: workspace:*
+        version: link:../../packages/mosaic/icons
+      '@octoev/mosaic-tokens':
+        specifier: workspace:*
+        version: link:../../packages/mosaic/tokens
       next:
         specifier: 'catalog:'
         version: 16.3.6(@types/node@24.13.6)(react-dom@19.3.0(react@19.3.0))(react@19.3.0)

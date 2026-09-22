@@ -1,0 +1,28 @@
+html {
+    color-scheme: dark;
+}
+
+body {
+    background-color: var(--mds-color-background-default);
+    color: var(--mds-color-content-default);
+}
+
+h1 {
+    font: var(--mds-typography-heading-small);
+}
+
+h2 {
+    font: var(--mds-typography-heading-xsmall);
+}
+
+/* The design system has no monospace font. */
+code {
+    font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+    font-size: 0.875em;
+}
+
+@media (min-width: 48rem) {
+    h1 {
+        font: var(--mds-typography-heading);
+    }
+}

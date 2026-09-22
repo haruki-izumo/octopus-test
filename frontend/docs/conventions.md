@@ -1,7 +1,7 @@
 # How we build things
 
 These are the rules we follow in the front-end. Each one exists because
-something went wrong without it. Paths are relative to
+something went wrong without it. Paths are relative to each app, such as
 `apps/customer-portal/`.
 
 ## 1. Call the API with `src/lib/api-client.ts`
@@ -19,8 +19,8 @@ Show amounts with `formatPounds` from `src/lib/money.ts`, passing the
 string the API returned. Never do arithmetic on money or work out prices
 in the browser; if a page needs a figure, the API should provide it.
 
-**Why:** a price worked out in the browser can differ by a penny from what
-the customer is charged.
+**Why:** a price worked out in the browser can differ from what the
+backend calculates.
 
 ## 3. Show dates with `formatUkDate`
 Show dates from the API, such as `"2026-10-01"`, with `formatUkDate` from
